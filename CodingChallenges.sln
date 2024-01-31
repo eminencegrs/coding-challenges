@@ -1,6 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HackerRank", "HackerRank", "{1138BDFC-20D0-47EA-86CE-2CD51CE07B76}"
+	ProjectSection(SolutionItems) = preProject
+		HackerRank\README.md = HackerRank\README.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D193EE27-9EE0-4099-8E75-7CA8846A1520}"
 EndProject

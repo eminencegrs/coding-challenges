@@ -1,6 +1,6 @@
 # HackerRank One Month Preparation Kit
 
-This repository contains my solutions to the challenges in the HackerRank One Month Preparation Kit.
+This folder contains my solutions to the challenges in the HackerRank One Month Preparation Kit.
 
 ## Week 1
 
