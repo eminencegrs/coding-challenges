@@ -1,4 +1,5 @@
-﻿using Shouldly;
+﻿using HackerRank.Week2.SalesByMatchTask;
+using Shouldly;
 using Xunit;
 
 namespace HackerRank.Week2.UnitTests;

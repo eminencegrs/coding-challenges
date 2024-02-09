@@ -1,4 +1,4 @@
-﻿namespace HackerRank.Week2;
+﻿namespace HackerRank.Week2.SalesByMatchTask;
 
 public class SalesByMatch
 {
