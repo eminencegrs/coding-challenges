@@ -30,5 +30,18 @@ public class Solution
             nums2Index--;
             current--;
         }
+
+        double result = 0.0;
+        if (nums1.Length % 2 == 0)
+        {
+            int mid2 = nums1.Length / 2;
+            int mid1 = mid2 - 1;
+            result = (mid1 + mid2) / 2.0;
+        }
+        else
+        {
+            int mid = nums1.Length / 2;
+            result = mid;
+        }
     }
 }
