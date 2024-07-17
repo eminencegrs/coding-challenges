@@ -2,7 +2,7 @@ namespace LeetCode.Challenges.GenerateParentheses;
 
 public class Solution
 {
-    private readonly List<string> result = new List<string>();
+    private readonly List<string> result = [];
 
     public IList<string> GenerateParenthesis(int n)
     {

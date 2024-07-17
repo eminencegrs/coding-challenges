@@ -4,7 +4,7 @@ using Xunit;
 
 namespace LeetCode.Challenges.UnitTests.AddTwoNumbers;
 
-public class SolutionTests
+public class AddTwoNumbersSolutionTests
 {
     [Theory]
     [MemberData(nameof(TestData))]
@@ -14,7 +14,7 @@ public class SolutionTests
         var b = GetListNodeFromArray(second);
         var expectedResult = GetListNodeFromArray(total);
 
-        var actualResult = new Solution().AddTwoNumbers(a, b);
+        var actualResult = AddTwoNumbersSolution.GetResult(a, b);
         actualResult.ShouldBeEquivalentTo(expectedResult);
     }
 
@@ -67,6 +67,12 @@ public class SolutionTests
             new[] { 2, 4, 3 },
             new[] { 5, 6, 4 },
             new[] { 7, 0, 8 }
+        ];
+        yield return
+        [
+            new[] { 2, 0, 9 },
+            new[] { 9, 9 },
+            new[] { 1, 0, 0, 1 }
         ];
         yield return
         [

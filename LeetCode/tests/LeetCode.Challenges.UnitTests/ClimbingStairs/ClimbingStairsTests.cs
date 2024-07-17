@@ -8,9 +8,9 @@ public class ClimbingStairsTests
 {
     [Theory]
     [MemberData(nameof(TestData))]
-    public void GivenNumbers_WhenAddTwoNumbers_ThenResultAsExpected(int n, int expectedResult)
+    public void GivenStairs_WhenGetResult_ThenResultAsExpected(int n, int expectedResult)
     {
-        var actualResult = new Solution().ClimbStairs(n);
+        var actualResult = ClimbStairsSolution.GetResult(n);
         actualResult.ShouldBeEquivalentTo(expectedResult);
     }
 

@@ -10,7 +10,7 @@ public class ClimbingStairsTests
     [MemberData(nameof(TestData))]
     public void GivenNumbers_WhenAddTwoNumbers_ThenResultAsExpected(int n, int expectedResult)
     {
-        var actualResult = new Solution().ClimbStairs(n);
+        var actualResult = new ClimbStairsSolution().ClimbStairs(n);
         actualResult.ShouldBeEquivalentTo(expectedResult);
     }
 

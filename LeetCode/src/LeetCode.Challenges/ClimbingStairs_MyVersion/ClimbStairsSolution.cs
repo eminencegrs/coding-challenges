@@ -1,6 +1,6 @@
-﻿namespace LeetCode.Challenges.ClimbingStairs;
+﻿namespace LeetCode.Challenges.ClimbingStairs_MyVersion;
 
-public class Solution
+public class ClimbStairsSolution
 {
     public int ClimbStairs(int n)
     {
@@ -25,7 +25,7 @@ public class Solution
             return value;
         }
 
-        cache[n] = this.Climb(n - 1, cache) + this.Climb(n - 2, cache);
+        cache[n] = this.Climb(n - 1, cache) + this.Climb(n - 2, cache) + this.Climb(n - 3, cache);
         return cache[n];
     }
 }

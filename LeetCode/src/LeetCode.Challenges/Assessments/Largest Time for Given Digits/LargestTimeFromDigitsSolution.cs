@@ -1,8 +1,8 @@
 namespace LeetCode.Challenges.Assessments.Largest_Time_for_Given_Digits;
 
-public class Solution
+public static class LargestTimeFromDigitsSolution
 {
-    public string LargestTimeFromDigits(int[] arr)
+    public static string GetResult(int[] arr)
     {
         var permutations = new List<int[]>();
         GetPermutations(arr, 0, permutations);

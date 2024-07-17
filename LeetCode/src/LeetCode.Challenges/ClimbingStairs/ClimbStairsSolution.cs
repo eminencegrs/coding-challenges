@@ -1,14 +1,14 @@
-﻿namespace LeetCode.Challenges.ClimbingStairs_MyVersion;
+﻿namespace LeetCode.Challenges.ClimbingStairs;
 
-public class Solution
+public static class ClimbStairsSolution
 {
-    public int ClimbStairs(int n)
+    public static int GetResult(int n)
     {
         var cache = new Dictionary<int, int>();
-        return this.Climb(n, cache);
+        return Climb(n, cache);
     }
 
-    private int Climb(int n, IDictionary<int, int> cache)
+    private static int Climb(int n, IDictionary<int, int> cache)
     {
         if (n < 0)
         {
@@ -25,7 +25,7 @@ public class Solution
             return value;
         }
 
-        cache[n] = this.Climb(n - 1, cache) + this.Climb(n - 2, cache) + this.Climb(n - 3, cache);
+        cache[n] = Climb(n - 1, cache) + Climb(n - 2, cache);
         return cache[n];
     }
 }

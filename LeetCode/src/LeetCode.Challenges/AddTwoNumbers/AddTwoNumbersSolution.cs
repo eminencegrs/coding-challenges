@@ -1,8 +1,8 @@
 namespace LeetCode.Challenges.AddTwoNumbers;
 
-public class Solution
+public static class AddTwoNumbersSolution
 {
-    public ListNode? AddTwoNumbers(ListNode? firstNode, ListNode? secondNode)
+    public static ListNode? GetResult(ListNode? firstNode, ListNode? secondNode)
     {
         var root = new ListNode();
         var current = root;
