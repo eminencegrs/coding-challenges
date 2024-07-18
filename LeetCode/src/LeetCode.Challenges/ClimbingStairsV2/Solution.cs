@@ -1,6 +1,6 @@
-﻿namespace LeetCode.Challenges.ClimbingStairs_MyVersion;
+﻿namespace LeetCode.Challenges.ClimbingStairsV2;
 
-public class ClimbStairsSolution
+public class Solution
 {
     public int ClimbStairs(int n)
     {

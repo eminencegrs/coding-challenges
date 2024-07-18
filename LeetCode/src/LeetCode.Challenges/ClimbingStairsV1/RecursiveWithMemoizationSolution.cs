@@ -1,6 +1,6 @@
-﻿namespace LeetCode.Challenges.ClimbingStairs;
+﻿namespace LeetCode.Challenges.ClimbingStairsV1;
 
-public static class ClimbStairsSolution
+public static class RecursiveWithMemoizationSolution
 {
     public static int GetResult(int n)
     {

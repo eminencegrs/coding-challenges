@@ -1,16 +1,16 @@
-﻿using LeetCode.Challenges.ClimbingStairs_MyVersion;
+﻿using LeetCode.Challenges.ClimbingStairsV2;
 using Shouldly;
 using Xunit;
 
-namespace LeetCode.Challenges.UnitTests.ClimbingStairs_MyVersion;
+namespace LeetCode.Challenges.UnitTests.ClimbingStairsV2;
 
-public class ClimbingStairsTests
+public class SolutionTests
 {
     [Theory]
     [MemberData(nameof(TestData))]
-    public void GivenNumbers_WhenAddTwoNumbers_ThenResultAsExpected(int n, int expectedResult)
+    public void GivenNStepStaircase_WhenClimbStairs_ThenResultAsExpected(int n, int expectedResult)
     {
-        var actualResult = new ClimbStairsSolution().ClimbStairs(n);
+        var actualResult = new Solution().ClimbStairs(n);
         actualResult.ShouldBeEquivalentTo(expectedResult);
     }
 
@@ -18,6 +18,7 @@ public class ClimbingStairsTests
     {
         yield return [ 2, 2 ];
         yield return [ 3, 4 ];
+        yield return [ 4, 7 ];
         yield return [ 5, 13 ];
         yield return [ 7, 44 ];
     }
