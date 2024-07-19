@@ -1,6 +1,5 @@
 using System.Collections;
 
-// ReSharper disable once CheckNamespace
 namespace LeetCode.Challenges.UnitTests.TrappingRainWater;
 
 public class TestData : IEnumerable<object[]>

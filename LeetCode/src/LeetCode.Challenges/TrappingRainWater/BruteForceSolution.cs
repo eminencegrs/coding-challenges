@@ -1,4 +1,3 @@
-// ReSharper disable once CheckNamespace
 namespace LeetCode.Challenges.TrappingRainWater;
 
 public static class BruteForceSolution

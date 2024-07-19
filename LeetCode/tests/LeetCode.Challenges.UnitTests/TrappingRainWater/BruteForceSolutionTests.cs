@@ -2,16 +2,15 @@ using LeetCode.Challenges.TrappingRainWater;
 using Shouldly;
 using Xunit;
 
-// ReSharper disable once CheckNamespace
 namespace LeetCode.Challenges.UnitTests.TrappingRainWater;
 
-public class TwoPointerSolutionTests
+public class BruteForceSolutionTests
 {
     [Theory]
     [ClassData(typeof(TestData))]
     public void GivenHeights_WhenCallGetResult_ThenResultAsExpected(int[] heights, int expectedResult)
     {
-        var actualResult = TwoPointerSolution.GetResult(heights);
+        var actualResult = BruteForceSolution.GetResult(heights);
         actualResult.ShouldBeEquivalentTo(expectedResult);
     }
 }
