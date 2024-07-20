@@ -8,7 +8,7 @@ public class Day18Tests
 {
     [Theory]
     [MemberData(nameof(TestData))]
-    public void GivenArray_WhenGetResult_ThenResultAsExpected(int[] numbers, int target, bool expectedResult)
+    public void GivenNumbersAndTarget_WhenGetResult_ThenResultAsExpected(int[] numbers, int target, bool expectedResult)
     {
         bool actualResult = Day18.GetResult(numbers, target);
         actualResult.ShouldBeEquivalentTo(expectedResult);
