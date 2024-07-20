@@ -10,6 +10,8 @@ from platforms such as HackerRank, LeetCode, etc.
 
 ## Structure
 
+### [DailyCodingProblem](./DailyCodingProblem/README.md)
+
 ### [HackerRank](./HackerRank/README.md)
 
 ### [LeetCode](./LeetCode/README.md)

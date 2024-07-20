@@ -33,6 +33,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DailyCodingProblem.Challenges", "DailyCodingProblem\src\DailyCodingProblem.Challenges\DailyCodingProblem.Challenges.csproj", "{39006CDE-833B-4C8D-B4F6-06178DACAD6B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DailyCodingProblem", "DailyCodingProblem", "{124839A7-881C-4FB7-B856-33360EF29F90}"
+	ProjectSection(SolutionItems) = preProject
+		DailyCodingProblem\README.md = DailyCodingProblem\README.md
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DailyCodingProblem.Challenges.UnitTests", "DailyCodingProblem\tests\DailyCodingProblem.Challenges.UnitTests\DailyCodingProblem.Challenges.UnitTests.csproj", "{1621213C-29B4-4FD5-AB25-0FDC816929D6}"
 EndProject
