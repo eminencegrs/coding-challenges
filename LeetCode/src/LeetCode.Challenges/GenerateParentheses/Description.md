@@ -8,7 +8,7 @@ Given `n` pairs of parentheses, write a function to generate all combinations of
 
 Input: `n = 1`  
 Output: `["()"]`  
-
+ 
 ### Example 2:
 
 Input: `n = 2`  
@@ -21,4 +21,4 @@ Output: `["((()))","(()())","(())()","()(())","()()()"]`
 
 ## Constraints:
 
-`1 <= n <= 8`
+`0 <= n <= 8`
