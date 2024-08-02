@@ -9,7 +9,7 @@ public class Solution
             throw new ArgumentOutOfRangeException();
         }
 
-        if (nums.Length is 1)
+        if (nums.Length == 1)
         {
             return;
         }

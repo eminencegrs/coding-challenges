@@ -16,10 +16,7 @@ public class SolutionTests
 
     public static IEnumerable<object[]> TestData()
     {
-        yield return
-        [
-            new [] { 1, 2, 3 },
-            new [] { 1, 3, 2 }
-        ];
+        yield return [ new [] { 1, 2, 3 }, new [] { 1, 3, 2 } ];
+        yield return [ new [] { 1, 2, 4, 3 }, new [] { 1, 3, 2, 4 } ];
     }
 }
