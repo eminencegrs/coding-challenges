@@ -24,5 +24,5 @@ Output: `[[2,2,2,2]]`
 ## Constraints:
 
  - `1 <= nums.length <= 200`  
- - `-109 <= nums[i] <= 109`  
- - `-109 <= target <= 109`
+ - `-10^9 <= nums[i] <= 10^9`  
+ - `-10^9 <= target <= 10^9`

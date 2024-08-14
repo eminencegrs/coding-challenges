@@ -4,7 +4,7 @@ using Xunit;
 
 namespace LeetCode.Challenges.UnitTests.AddTwoNumbers;
 
-public class AddTwoNumbersSolutionTests
+public class SolutionTests
 {
     [Theory]
     [MemberData(nameof(TestData))]
@@ -14,24 +14,24 @@ public class AddTwoNumbersSolutionTests
         var b = GetListNodeFromArray(second);
         var expectedResult = GetListNodeFromArray(total);
 
-        var actualResult = AddTwoNumbersSolution.GetResult(a, b);
+        var actualResult = Solution.GetResult(a, b);
         actualResult.ShouldBeEquivalentTo(expectedResult);
     }
 
     // TODO: It's a helper method. Improve it.
-    private static ListNode? GetListNodeFromArray(int[] num1)
+    private static Solution.ListNode? GetListNodeFromArray(int[] num1)
     {
-        ListNode? node = null;
+        Solution.ListNode? node = null;
         for (var i = num1.Length - 1; i >= 0; i--)
         {
             if (node == null)
             {
-                node = new ListNode(num1[i]);
+                node = new Solution.ListNode(num1[i]);
             }
             else
             {
                 var temp = node;
-                node = new ListNode(num1[i], temp);
+                node = new Solution.ListNode(num1[i], temp);
             }
         }
 
@@ -39,18 +39,18 @@ public class AddTwoNumbersSolutionTests
     }
 
     // TODO: verify if it works.
-    private static ListNode ConvertArrayIntoListNode(int[] num)
+    private static Solution.ListNode ConvertArrayIntoListNode(int[] num)
     {
         // Create a dummy node to simplify list construction.
-        ListNode dummy = new ListNode();
-        ListNode current = dummy;
+        Solution.ListNode dummy = new Solution.ListNode();
+        Solution.ListNode current = dummy;
 
         // Iterate through the array in reverse order to ensure consistency with the problem requirements,
         // where the digits are stored in reverse order within the linked lists.
         for (int i = num.Length - 1; i >= 0; i--)
         {
             // Create a new node with the current value.
-            current.Next = new ListNode(num[i]);
+            current.Next = new Solution.ListNode(num[i]);
 
             // Move to the next node
             current = current.Next;

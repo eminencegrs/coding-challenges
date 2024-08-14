@@ -10,7 +10,7 @@ public class Day18Tests
     [MemberData(nameof(TestData))]
     public void GivenBrackets_WhenCheckIfBalanced_ThenResultAsExpected(string brackets, bool expectedResult)
     {
-        bool actualResult = Day13.CheckIfBalanced(brackets);
+        bool actualResult = Day13Task.CheckIfBalanced(brackets);
         actualResult.ShouldBeEquivalentTo(expectedResult);
     }
 

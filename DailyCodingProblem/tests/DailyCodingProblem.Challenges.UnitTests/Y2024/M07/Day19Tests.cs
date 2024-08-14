@@ -10,7 +10,7 @@ public class Day19Tests
     [MemberData(nameof(TestData))]
     public void GivenNumbers_WhenGetResult_ThenResultAsExpected(int[] numbers, int[] expectedResult)
     {
-        var actualResult = Day19.GetResult(numbers);
+        var actualResult = Day19Task.GetResult(numbers);
         actualResult.ShouldBeEquivalentTo(expectedResult);
     }
 
@@ -19,7 +19,7 @@ public class Day19Tests
     public void GivenNumbers_WhenGetResultNotUsingDivision_ThenResultAsExpected(
         int[] numbers, int[] expectedResult)
     {
-        var actualResult = Day19.GetResultNotUsingDivision(numbers);
+        var actualResult = Day19Task.GetResultNotUsingDivision(numbers);
         actualResult.ShouldBeEquivalentTo(expectedResult);
     }
 

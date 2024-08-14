@@ -12,7 +12,7 @@ namespace DailyCodingProblem.Challenges.Y2024.M08;
 //  -- O(1) - for the best case. Since the function checks the length at the start,
 // if the string length is odd, it immediately returns false without entering the loop.
 //  -- O(n) - for the worst and average cases.
-public static class Day13
+public static class Day13Task
 {
     public static bool CheckIfBalanced(string brackets)
     {

@@ -8,14 +8,14 @@ namespace DailyCodingProblem.Challenges.Y2024.M07;
 // If our input was `[3, 2, 1]`, the expected output would be `[2, 3, 6]`.
 // 
 // Follow-up: what if you can't use division?
-public static class Day19
+public static class Day19Task
 {
     public static int[] GetResult(int[] numbers)
     {
         var result = new int[numbers.Length];
         if (numbers.Length == 0)
         {
-            return Enumerable.Empty<int>().ToArray();
+            return [];
         }
 
         if (numbers.Any(x => x == 0))

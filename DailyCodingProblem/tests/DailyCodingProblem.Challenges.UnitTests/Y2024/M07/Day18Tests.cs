@@ -10,7 +10,7 @@ public class Day18Tests
     [MemberData(nameof(TestData))]
     public void GivenNumbersAndTarget_WhenGetResult_ThenResultAsExpected(int[] numbers, int target, bool expectedResult)
     {
-        bool actualResult = Day18.GetResult(numbers, target);
+        bool actualResult = Day18Task.GetResult(numbers, target);
         actualResult.ShouldBeEquivalentTo(expectedResult);
     }
 
