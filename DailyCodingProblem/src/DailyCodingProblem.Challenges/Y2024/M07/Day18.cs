@@ -1,4 +1,4 @@
-﻿namespace DailyCodingProblem.Challenges.Year2024.Month07July;
+﻿namespace DailyCodingProblem.Challenges.Y2024.M07;
 
 // This problem was asked by Google.
 // Given a list of numbers and a number `k`, return whether any two numbers from the list add up to `k`.
@@ -20,12 +20,13 @@ public static class Day18
 
         while (leftPointer < rightPointer)
         {
-            if (numbers[leftPointer] + numbers[rightPointer] == target)
+            var current = numbers[leftPointer] + numbers[rightPointer];
+            if (current == target)
             {
                 return true;
             }
 
-            if (numbers[leftPointer] + numbers[rightPointer] < target)
+            if (current < target)
             {
                 leftPointer++;
             }

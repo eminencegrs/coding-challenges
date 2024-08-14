@@ -1,8 +1,8 @@
-using DailyCodingProblem.Challenges.Year2024.Month07July;
+using DailyCodingProblem.Challenges.Y2024.M07;
 using Shouldly;
 using Xunit;
 
-namespace DailyCodingProblem.Challenges.UnitTests.Year2024.Month07July;
+namespace DailyCodingProblem.Challenges.UnitTests.Y2024.M07;
 
 public class Day19Tests
 {
@@ -29,6 +29,6 @@ public class Day19Tests
         yield return [ new [] { 3, 2, 1 }, new [] { 2, 3, 6 } ];
         yield return [ new [] { -3, -2, 1 }, new [] { -2, -3, 6 } ];
         yield return [ new [] { 0, 4, 7 }, new [] { 0, 0, 0 } ];
-        yield return [ Enumerable.Empty<int>().ToArray(), Enumerable.Empty<int>().ToArray() ];
+        yield return [ Array.Empty<int>(), Array.Empty<int>() ];
     }
 }

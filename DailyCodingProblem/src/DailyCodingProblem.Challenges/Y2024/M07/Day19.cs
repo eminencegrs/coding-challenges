@@ -1,4 +1,4 @@
-namespace DailyCodingProblem.Challenges.Year2024.Month07July;
+namespace DailyCodingProblem.Challenges.Y2024.M07;
 
 // This problem was asked by Uber.
 // Given an array of integers, return a new array such that each element at index `i` of the new array
@@ -8,7 +8,7 @@ namespace DailyCodingProblem.Challenges.Year2024.Month07July;
 // If our input was `[3, 2, 1]`, the expected output would be `[2, 3, 6]`.
 // 
 // Follow-up: what if you can't use division?
-public class Day19
+public static class Day19
 {
     public static int[] GetResult(int[] numbers)
     {
@@ -42,7 +42,7 @@ public class Day19
         var result = new int[numbers.Length];
         if (numbers.Length == 0)
         {
-            return Enumerable.Empty<int>().ToArray();
+            return [];
         }
 
         if (numbers.Any(x => x == 0))
