@@ -1,4 +1,4 @@
-namespace DailyCodingProblem.Challenges.Year2024.July;
+namespace DailyCodingProblem.Challenges.Year2024.Month07July;
 
 // This problem was asked by Uber.
 // Given an array of integers, return a new array such that each element at index `i` of the new array

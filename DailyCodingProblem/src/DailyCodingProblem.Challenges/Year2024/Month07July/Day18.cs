@@ -1,4 +1,4 @@
-﻿namespace DailyCodingProblem.Challenges.Year2024.July;
+﻿namespace DailyCodingProblem.Challenges.Year2024.Month07July;
 
 // This problem was asked by Google.
 // Given a list of numbers and a number `k`, return whether any two numbers from the list add up to `k`.

@@ -1,8 +1,8 @@
-using DailyCodingProblem.Challenges.Year2024.July;
+using DailyCodingProblem.Challenges.Year2024.Month07July;
 using Shouldly;
 using Xunit;
 
-namespace DailyCodingProblem.Challenges.UnitTests.Year2024.July;
+namespace DailyCodingProblem.Challenges.UnitTests.Year2024.Month07July;
 
 public class Day19Tests
 {
