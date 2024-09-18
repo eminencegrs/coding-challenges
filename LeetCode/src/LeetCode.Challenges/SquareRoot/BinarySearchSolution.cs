@@ -2,6 +2,17 @@ namespace LeetCode.Challenges.SquareRoot;
 
 // Time Complexity: O(logn).
 // In every step of the binary search, the size of the problem is reduced by half.
+//
+// Convergence: Linear, as it halves the search interval with each iteration.
+// Iterations: More iterations compared to Newton’s method for the same level of precision.
+//
+// Summary:  
+// Newton’s method is generally more efficient than binary search for finding square roots 
+// because it converges faster (quadratically vs. linearly). 
+// This means Newton’s method usually requires fewer iterations to reach the desired precision.
+// While both methods have the same theoretical time complexity, 
+// Newton’s method is typically faster in practice due to its rapid convergence. 
+// However, binary search might be preferred for its simplicity in some cases.
 public class BinarySearchSolution
 {
     public static int GetResult(int x)
