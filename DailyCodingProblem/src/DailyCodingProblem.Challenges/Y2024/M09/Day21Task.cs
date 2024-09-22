@@ -16,18 +16,17 @@ public class Day21Task
     /// Constructor to set the bias level (0 to 1), where the probability of returning `1` is `biasProbability`. 
     /// </summary>
     /// <param name="biasProbability">
-    /// A double value between 0 (inclusive) and 1 (exclusive) that specifies the probability of returning `1`. 
-    /// A value of 0 indicates always returning `0`.
+    /// A double value that specifies the probability of returning `1`. 
+    /// The value must be strictly greater than 0 and less than 1, ensuring it is always in the range (0, 1).
     /// </param>
     /// <exception cref="ArgumentOutOfRangeException">
     /// Thrown when <paramref name="biasProbability"/> is less than 0 or greater than or equal to 1.
     /// </exception>
     public Day21Task(double biasProbability)
     {
-        if (biasProbability is < 0 or >= 1)
+        if (biasProbability is <= 0 or >= 1)
         {
-            throw new ArgumentOutOfRangeException(
-                nameof(biasProbability), "Bias probability must be between 0 and 1.");
+            throw new ArgumentOutOfRangeException(nameof(biasProbability), "Bias probability must be > 0 and < 1");
         }
 
         this.biasProbability = biasProbability;
@@ -60,8 +59,10 @@ public class Day21Task
 
     public (double zerosPercentage, double onesPercentage) MonteCarlo(int trials)
     {
-        int zerosCount = 0;
-        int onesCount = 0;
+        ArgumentOutOfRangeException.ThrowIfNegativeOrZero(trials, "The number of trials must be greater than 0.");
+
+        var zerosCount = 0;
+        var onesCount = 0;
 
         for (int i = 0; i < trials; i++)
         {
