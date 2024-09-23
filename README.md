@@ -1,7 +1,6 @@
 # Welcome to the Coding Challenges Repository! 🚀
 
-This repository is a consolidated collection of solutions to various coding challenges 
-from platforms such as HackerRank, LeetCode, etc.
+This repository is a consolidated collection of solutions to popular coding challenges.
 
 ### Statuses
 
