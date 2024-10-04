@@ -9,10 +9,11 @@ public class OptimizedSolution
     public string Reverse(string input)
     {
         var characters = input.ToCharArray();
-        var inputLength = characters.Length;
         var parenthesesPairs = new Dictionary<int, int>();
         var stack = new Stack<int>();
         var result = new StringBuilder();
+
+        var inputLength = characters.Length;
 
         // Preprocessing.
         for (var i = 0; i < inputLength; i++)

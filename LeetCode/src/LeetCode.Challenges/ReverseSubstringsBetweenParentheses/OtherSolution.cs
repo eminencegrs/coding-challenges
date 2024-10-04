@@ -4,6 +4,7 @@ namespace LeetCode.Challenges.ReverseSubstringsBetweenParentheses;
 
 public class OtherSolution
 {
+    // The input string is assumed to contain balanced parentheses.
     public string Reverse(string input)
     {
         var stack = new Stack<int>();
