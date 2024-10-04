@@ -5,10 +5,11 @@ namespace LeetCode.Challenges.ReverseSubstringsBetweenParentheses;
 // Time Complexity: O(n).
 public class OptimizedSolution
 {
-    public string Reverse(string s)
+    // The input string is assumed to contain balanced parentheses.
+    public string Reverse(string input)
     {
-        var inputChars = s.ToCharArray();
-        var inputLength = inputChars.Length;
+        var characters = input.ToCharArray();
+        var inputLength = characters.Length;
         var parenthesesPairs = new Dictionary<int, int>();
         var stack = new Stack<int>();
         var result = new StringBuilder();
@@ -17,12 +18,12 @@ public class OptimizedSolution
         for (var i = 0; i < inputLength; i++)
         {
             // If it's opening - add to the stack & move forward.
-            if (inputChars[i] == '(')
+            if (characters[i] == '(')
             {
                 stack.Push(i);
             }
             // If it's closing - pop its pair from the stack & add to the dictionary.
-            else if (inputChars[i] == ')')
+            else if (characters[i] == ')')
             {
                 var right = stack.Pop();
                 parenthesesPairs[i] = right;
@@ -35,14 +36,14 @@ public class OptimizedSolution
         var index = 0;
         while (index < inputLength)
         {
-            if (inputChars[index] is '(' or ')')
+            if (characters[index] is '(' or ')')
             {
                 index = parenthesesPairs[index];
                 direction = -direction;
             }
             else
             {
-                result.Append(inputChars[index]);
+                result.Append(characters[index]);
             }
 
             index += direction;
