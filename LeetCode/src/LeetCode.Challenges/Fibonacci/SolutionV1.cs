@@ -7,10 +7,10 @@ public class SolutionV1
     public int Fib(int n)
     {
         var cache = new Dictionary<int, int>();
-        return Fib(n, cache);
+        return Fib(n, ref cache);
     }
 
-    private int Fib(int n, IDictionary<int, int> cache)
+    private int Fib(int n, ref Dictionary<int, int> cache)
     {
         if (n == 0)
         {
@@ -27,7 +27,7 @@ public class SolutionV1
             return val;
         }
 
-        cache[n] = this.Fib(n - 2, cache) + this.Fib(n - 1, cache);
+        cache[n] = this.Fib(n - 2, ref cache) + this.Fib(n - 1, ref cache);
         return cache[n];
     }
 }
