@@ -8,7 +8,7 @@ public class IterativeSolutionTests
 {
     [Theory]
     [ClassData(typeof(TestData))]
-    public void GivenString_WhenReverse_ThenResultAsExpected(int input, int expectedResult)
+    public void GivenNumber_WhenCallIterativeTribonacci_ThenResultAsExpected(int input, int expectedResult)
     {
         var actualResult = new IterativeSolution().Tribonacci(input);
         actualResult.ShouldBe(expectedResult);

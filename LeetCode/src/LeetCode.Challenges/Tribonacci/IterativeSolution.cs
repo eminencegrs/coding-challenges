@@ -4,33 +4,30 @@ public class IterativeSolution
 {
     public int Tribonacci(int n)
     {
-        if (n < 0)
-        {
-            throw new ArgumentOutOfRangeException("n");
-        }
+        ArgumentOutOfRangeException.ThrowIfNegative(n);
 
-        if (n == 0)
+        return n switch
         {
-            return 0;
-        }
+            0 => 0,
+            <= 2 => 1,
+            _ => this.TribInternal(n)
+        };
+    }
 
-        if (n <= 2)
-        {
-            return 1;
-        }
-
-        var t1 = 0;
-        var t2 = 1;
-        var t3 = 1;
+    private int TribInternal(int n)
+    {
+        var firstItem = 0;
+        var secondItem = 1;
+        var thirdItem = 1;
 
         for (var i = 3; i <= n; i++)
         {
-            var current = t1 + t2 + t3;
-            t1 = t2;
-            t2 = t3;
-            t3 = current;
+            var current = firstItem + secondItem + thirdItem;
+            firstItem = secondItem;
+            secondItem = thirdItem;
+            thirdItem = current;
         }
 
-        return t3;
+        return thirdItem;
     }
 }
