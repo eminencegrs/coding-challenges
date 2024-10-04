@@ -1,5 +1,6 @@
 namespace LeetCode.Challenges.BasicCalculator2;
 
+// Time Complexity: O(n).
 public class Solution
 {
     public int Calculate(string input)
@@ -13,8 +14,6 @@ public class Solution
         for (var i = 0; i < input.Length; i++)
         {
             var currentChar = input[i];
-
-            // If the current char is a digit, build the number.
             if (char.IsDigit(currentChar))
             {
                 currentNumber = currentNumber * 10 + (currentChar - '0');
@@ -25,22 +24,16 @@ public class Solution
                 continue;
             }
 
-            if (operation == '+')
+            var tempResult = operation switch
             {
-                stack.Push(currentNumber);
-            }
-            else if (operation == '-')
-            {
-                stack.Push(-currentNumber);
-            }
-            else if (operation == '*')
-            {
-                stack.Push(stack.Pop() * currentNumber);
-            }
-            else if (operation == '/')
-            {
-                stack.Push(stack.Pop() / currentNumber);
-            }
+                '+' => currentNumber,
+                '-' => -currentNumber,
+                '*' => stack.Pop() * currentNumber,
+                '/' => stack.Pop() / currentNumber,
+                _ => throw new InvalidOperationException($"Unknown operation '{operation}'.")
+            };
+
+            stack.Push(tempResult);
 
             operation = currentChar;
             currentNumber = 0;
