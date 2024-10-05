@@ -1,5 +1,6 @@
 namespace LeetCode.Challenges.TwoSum2;
 
+// Time Complexity: O(n).
 public static class TwoPointerSolution
 {
     public static int[] GetResult(int[] numbers, int target)
@@ -25,6 +26,6 @@ public static class TwoPointerSolution
             }
         }
 
-        throw new InvalidOperationException("Solution Not Found");
+        throw new InvalidOperationException("Solution not found");
     }
 }

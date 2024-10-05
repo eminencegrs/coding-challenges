@@ -4,18 +4,18 @@ public static class TwoPointerWithSortingSolution
 {
     public static int[] GetResult(int[] numbers, int target)
     {
-        List<(int number, int originalIndex)> sortedNumbersWithIndex = numbers.Select((n, i) => (n, i)).ToList();
-        sortedNumbersWithIndex.Sort((a, b) => a.number.CompareTo(b.number));
+        List<(int value, int index)> sortedNumbers = numbers.Select((n, i) => (n, i)).ToList();
+        sortedNumbers.Sort((a, b) => a.value.CompareTo(b.value));
 
         int leftPointer = 0;
-        int rightPointer = sortedNumbersWithIndex.Count - 1;
+        int rightPointer = sortedNumbers.Count - 1;
 
         while (leftPointer < rightPointer)
         {
-            int sum = sortedNumbersWithIndex[leftPointer].number + sortedNumbersWithIndex[rightPointer].number;
+            int sum = sortedNumbers[leftPointer].value + sortedNumbers[rightPointer].value;
             if (sum == target)
             {
-                return [sortedNumbersWithIndex[leftPointer].originalIndex, sortedNumbersWithIndex[rightPointer].originalIndex];
+                return [sortedNumbers[leftPointer].index, sortedNumbers[rightPointer].index];
             }
 
             if (sum < target)
@@ -28,6 +28,6 @@ public static class TwoPointerWithSortingSolution
             }
         }
 
-        throw new InvalidOperationException("Solution Not Found");
+        throw new InvalidOperationException("Solution not found");
     }
 }

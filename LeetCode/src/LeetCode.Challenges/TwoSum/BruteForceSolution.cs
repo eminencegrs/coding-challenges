@@ -1,5 +1,6 @@
 ﻿namespace LeetCode.Challenges.TwoSum;
 
+// Time Complexity: O(n^2)
 public static class BruteForceSolution
 {
     public static int[] GetResult(int[] numbers, int target)
@@ -17,6 +18,6 @@ public static class BruteForceSolution
             }
         }
 
-        return Array.Empty<int>();
+        return [];
     }
 }
