@@ -6,25 +6,27 @@ public class SingleNumber3Solution
 {
     public static int[] Get(int[] numbers)
     {
+        // First, we XOR all numbers to get the XOR of the two unique numbers.
         int xorResult = numbers.Aggregate(0, (current, num) => current ^ num);
 
-        int distinguishingBit = -xorResult & xorResult;
+        // This identifies the rightmost bit (RMB) where the two unique numbers differ.
+        int distinguishingBit = xorResult & -xorResult;
 
-        int firstItem = 0;
-        int secondItem = 0;
+        int unique1 = 0;
+        int unique2 = 0;
 
         foreach (var num in numbers)
         {
             if ((distinguishingBit & num) != 0)
             {
-                firstItem ^= num;
+                unique1 ^= num;
             }
             else
             {
-                secondItem ^= num;
+                unique2 ^= num;
             }
         }
 
-        return [firstItem, secondItem];
+        return [unique1, unique2];
     }
 }
