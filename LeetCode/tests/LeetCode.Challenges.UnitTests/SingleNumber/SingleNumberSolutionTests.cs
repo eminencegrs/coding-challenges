@@ -4,13 +4,13 @@ using Xunit;
 
 namespace LeetCode.Challenges.UnitTests.SingleNumber;
 
-public class SolutionTests
+public class SingleNumberSolutionTests
 {
     [Theory]
     [MemberData(nameof(TestData))]
     public void GivenArray_WhenSearch_ThenResultAsExpected(int[] nums, int expectedResult)
     {
-        var actualResult = Solution.SingleNumber(nums);
+        var actualResult = SingleNumberSolution.Get(nums);
         actualResult.ShouldBe(expectedResult);
     }
 
