@@ -8,11 +8,11 @@ public class Solution
 
     public static string RemoveDuplicates(string str, int length)
     {
-        var processedChars = BuildCharacterStack(str, length);
-        return GetResult(processedChars);
+        var processedChars = ProcessCharacters(str, length);
+        return GetFinalString(processedChars);
     }
 
-    private static Stack<CharacterGroup> BuildCharacterStack(string str, int length)
+    private static Stack<CharacterGroup> ProcessCharacters(string str, int length)
     {
         var stack = new Stack<CharacterGroup>();
         foreach (var character in str)
@@ -35,7 +35,7 @@ public class Solution
         return stack;
     }
 
-    private static string GetResult(Stack<CharacterGroup> processedChars)
+    private static string GetFinalString(Stack<CharacterGroup> processedChars)
     {
         var sb = new StringBuilder();
         while (processedChars.Count > 0)

@@ -8,9 +8,9 @@ public class SolutionTests
 {
     [Theory]
     [ClassData(typeof(TestData))]
-    public void GivenString_WhenCallGetResult_ThenResultAsExpected(string input, int k, string expectedResult)
+    public void GivenString_WhenRemoveDuplicates_ThenResultAsExpected(string str, int k, string expectedResult)
     {
-        var actualResult = Solution.RemoveDuplicates(input, k);
+        var actualResult = Solution.RemoveDuplicates(str, k);
         actualResult.ShouldBeEquivalentTo(expectedResult);
     }
 }
