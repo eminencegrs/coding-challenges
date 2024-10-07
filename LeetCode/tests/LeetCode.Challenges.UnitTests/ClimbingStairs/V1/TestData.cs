@@ -1,6 +1,6 @@
 using System.Collections;
 
-namespace LeetCode.Challenges.UnitTests.ClimbingStairsV1;
+namespace LeetCode.Challenges.UnitTests.ClimbingStairs.V1;
 
 public class TestData : IEnumerable<object[]>
 {

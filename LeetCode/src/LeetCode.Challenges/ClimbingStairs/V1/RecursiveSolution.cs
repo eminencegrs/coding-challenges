@@ -1,4 +1,4 @@
-﻿namespace LeetCode.Challenges.ClimbingStairsV1;
+﻿namespace LeetCode.Challenges.ClimbingStairs.V1;
 
 // Time Complexity is O(2^n), as it is a recursive algorithm that branches twice each call.
 // Space Complexity is O(n).

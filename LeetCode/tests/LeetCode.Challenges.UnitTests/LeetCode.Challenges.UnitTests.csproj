@@ -31,4 +31,8 @@
       <ProjectReference Include="..\..\src\LeetCode.Challenges\LeetCode.Challenges.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="ClimbingStairs\" />
+    </ItemGroup>
+
 </Project>

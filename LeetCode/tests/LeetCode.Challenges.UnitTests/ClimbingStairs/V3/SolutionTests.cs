@@ -1,8 +1,8 @@
-﻿using LeetCode.Challenges.ClimbingStairsV3;
+﻿using LeetCode.Challenges.ClimbingStairs.V3;
 using Shouldly;
 using Xunit;
 
-namespace LeetCode.Challenges.UnitTests.ClimbingStairsV3;
+namespace LeetCode.Challenges.UnitTests.ClimbingStairs.V3;
 
 public class SolutionTests
 {

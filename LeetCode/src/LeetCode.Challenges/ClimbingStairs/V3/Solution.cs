@@ -1,4 +1,4 @@
-﻿namespace LeetCode.Challenges.ClimbingStairsV3;
+﻿namespace LeetCode.Challenges.ClimbingStairs.V3;
 
 public static class Solution
 {

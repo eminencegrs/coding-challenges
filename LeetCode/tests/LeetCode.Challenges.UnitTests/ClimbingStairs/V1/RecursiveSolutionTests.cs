@@ -1,16 +1,16 @@
-﻿using LeetCode.Challenges.ClimbingStairsV1;
+using LeetCode.Challenges.ClimbingStairs.V1;
 using Shouldly;
 using Xunit;
 
-namespace LeetCode.Challenges.UnitTests.ClimbingStairsV1;
+namespace LeetCode.Challenges.UnitTests.ClimbingStairs.V1;
 
-public class RecursiveWithMemoizationSolutionTests
+public class RecursiveSolutionTests
 {
     [Theory]
     [ClassData(typeof(TestData))]
     public void GivenNStepStaircase_WhenClimb_ThenResultAsExpected(int n, int expectedResult)
     {
-        var actualResult = RecursiveWithMemoizationSolution.GetResult(n);
+        var actualResult = RecursiveSolution.GetResult(n);
         actualResult.ShouldBeEquivalentTo(expectedResult);
     }
 }
