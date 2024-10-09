@@ -11,7 +11,7 @@ public class ManualResetEventSolutionTests
     [ClassData(typeof(TestData))]
     public void GivenOrder_WhenRunThreeMethods_ThenMethodsExecutedInOrderRegardlessOfInvocation(int[] nums)
     {
-        var cut = new ManualResetEventSolution();
+        using var cut = new ManualResetEventSolution();
         var output = new StringBuilder();
 
         Action printFirst = () => output.Append("first");

@@ -3,7 +3,7 @@ using System.Threading;
 
 namespace LeetCode.Challenges.PrintInOrder;
 
-public class ManualResetEventSolution
+public class ManualResetEventSolution : IDisposable
 {
     private readonly ManualResetEvent firstDone = new(false);
     private readonly ManualResetEvent secondDone = new(false);
@@ -33,5 +33,22 @@ public class ManualResetEventSolution
         this.secondDone.WaitOne();
 
         printThird();
+    }
+
+    public void Dispose()
+    {
+        this.Dispose(true);
+        GC.SuppressFinalize(this);
+    }
+
+    protected virtual void Dispose(bool disposing)
+    {
+        if (!disposing)
+        {
+            return;
+        }
+
+        this.firstDone?.Dispose();
+        this.secondDone?.Dispose();
     }
 }

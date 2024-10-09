@@ -1,7 +1,9 @@
 using System;
 using System.Threading;
 
-public class SemaphoreSlimSolution
+namespace LeetCode.Challenges.PrintInOrder;
+
+public class SemaphoreSlimSolution : IDisposable
 {
     private readonly SemaphoreSlim secondSemaphore = new(0);
     private readonly SemaphoreSlim thirdSemaphore = new(0);
@@ -30,5 +32,22 @@ public class SemaphoreSlimSolution
         // Wait for second() to complete.
         this.thirdSemaphore.Wait();
         printThird();
+    }
+
+    public void Dispose()
+    {
+        this.Dispose(true);
+        GC.SuppressFinalize(this);
+    }
+
+    protected virtual void Dispose(bool disposing)
+    {
+        if (!disposing)
+        {
+            return;
+        }
+
+        this.secondSemaphore?.Dispose();
+        this.thirdSemaphore?.Dispose();
     }
 }

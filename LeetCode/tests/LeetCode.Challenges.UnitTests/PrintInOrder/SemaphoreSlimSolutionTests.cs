@@ -13,7 +13,7 @@ public class SemaphoreSlimSolutionTests
     [ClassData(typeof(TestData))]
     public void GivenOrder_WhenRunThreeMethods_ThenMethodsExecutedInOrderRegardlessOfInvocation(int[] nums)
     {
-        var cut = new SemaphoreSlimSolution();
+        using var cut = new SemaphoreSlimSolution();
         var output = new StringBuilder();
 
         Action printFirst = () => output.Append("first");
