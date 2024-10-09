@@ -42,4 +42,13 @@ public class ManualResetEventSolutionTests
 
         output.ToString().Should().Be("firstsecondthird");
     }
+
+    [Fact]
+    public void GivenDisposedObject_WhenRunAnyMethod_ThenObjectDisposedExceptionThrown()
+    {
+        var cut = new ManualResetEventSolution();
+        cut.Dispose();
+        Action action = () => cut.First(() => Console.WriteLine("blah"));
+        action.Should().Throw<ObjectDisposedException>();
+    }
 }

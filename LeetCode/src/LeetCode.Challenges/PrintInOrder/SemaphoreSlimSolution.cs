@@ -8,28 +8,36 @@ public class SemaphoreSlimSolution : IDisposable
     private readonly SemaphoreSlim secondSemaphore = new(0);
     private readonly SemaphoreSlim thirdSemaphore = new(0);
 
+    private bool isDisposed;
+
     public void First(Action printFirst)
     {
+        this.AssertNotDisposed();
+
         printFirst();
 
-        // Signal that second() can now run.
+        // Signal that the Second method can now run.
         this.secondSemaphore.Release();
     }
 
     public void Second(Action printSecond)
     {
-        // Wait for first() to complete.
+        this.AssertNotDisposed();
+
+        // Wait for the First method to complete.
         this.secondSemaphore.Wait();
 
         printSecond();
 
-        // Signal that third() can now run.
+        // Signal that the Third method can now run.
         this.thirdSemaphore.Release();
     }
 
     public void Third(Action printThird)
     {
-        // Wait for second() to complete.
+        this.AssertNotDisposed();
+
+        // Wait for the Second method to complete.
         this.thirdSemaphore.Wait();
         printThird();
     }
@@ -42,6 +50,11 @@ public class SemaphoreSlimSolution : IDisposable
 
     protected virtual void Dispose(bool disposing)
     {
+        if (this.isDisposed)
+        {
+            return;
+        }
+
         if (!disposing)
         {
             return;
@@ -49,5 +62,15 @@ public class SemaphoreSlimSolution : IDisposable
 
         this.secondSemaphore?.Dispose();
         this.thirdSemaphore?.Dispose();
+
+        this.isDisposed = true;
+    }
+
+    private void AssertNotDisposed()
+    {
+        if (this.isDisposed)
+        {
+            throw new ObjectDisposedException(nameof(ManualResetEventSolution));
+        }
     }
 }

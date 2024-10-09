@@ -8,28 +8,36 @@ public class ManualResetEventSolution : IDisposable
     private readonly ManualResetEvent firstDone = new(false);
     private readonly ManualResetEvent secondDone = new(false);
 
+    private bool isDisposed;
+
     public void First(Action printFirst)
     {
+        this.AssertNotDisposed();
+
         printFirst();
 
-        // Signal that first() has completed.
+        // Signal that the First method has completed.
         this.firstDone.Set();
     }
 
     public void Second(Action printSecond)
     {
-        // Wait for first() to complete.
+        this.AssertNotDisposed();
+
+        // Wait for the First method to complete.
         this.firstDone.WaitOne();
 
         printSecond();
 
-        // Signal that second() has completed.
+        // Signal that the Second method has completed.
         this.secondDone.Set();
     }
 
     public void Third(Action printThird)
     {
-        // Wait for second() to complete.
+        this.AssertNotDisposed();
+
+        // Wait for the Second method to complete.
         this.secondDone.WaitOne();
 
         printThird();
@@ -43,6 +51,11 @@ public class ManualResetEventSolution : IDisposable
 
     protected virtual void Dispose(bool disposing)
     {
+        if (this.isDisposed)
+        {
+            return;
+        }
+
         if (!disposing)
         {
             return;
@@ -50,5 +63,15 @@ public class ManualResetEventSolution : IDisposable
 
         this.firstDone?.Dispose();
         this.secondDone?.Dispose();
+
+        this.isDisposed = true;
+    }
+
+    private void AssertNotDisposed()
+    {
+        if (this.isDisposed)
+        {
+            throw new ObjectDisposedException(nameof(ManualResetEventSolution));
+        }
     }
 }
