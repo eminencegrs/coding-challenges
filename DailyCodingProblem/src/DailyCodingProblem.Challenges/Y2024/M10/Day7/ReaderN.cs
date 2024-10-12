@@ -6,7 +6,7 @@ public class ReaderN : Reader7
     private int bufferIndex = 0;
     private int bufferSize = 0;
 
-    public ReaderN(string initialContent) : base(initialContent)
+    public ReaderN(string contentToRead) : base(contentToRead)
     {
     }
 
