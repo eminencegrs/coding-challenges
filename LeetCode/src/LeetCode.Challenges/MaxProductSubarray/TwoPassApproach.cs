@@ -3,7 +3,7 @@ namespace LeetCode.Challenges.MaxProductSubarray;
 // Time Complexity: O(n).
 public class TwoPassApproach
 {
-    public int GetResult(int[] numbers)
+    public int MaxProduct(int[] numbers)
     {
         if (numbers.Length == 0)
         {

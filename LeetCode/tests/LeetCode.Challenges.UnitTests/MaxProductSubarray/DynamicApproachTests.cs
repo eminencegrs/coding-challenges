@@ -4,13 +4,13 @@ using Xunit;
 
 namespace LeetCode.Challenges.UnitTests.MaxProductSubarray;
 
-public class TwoPassApproachTests
+public class DynamicApproachTests
 {
     [Theory]
     [MemberData(nameof(TestData))]
     public void GivenNumbers_WhenMaxProduct_ThenResultAsExpected(int[] numbers, int expectedResult)
     {
-        var actualResult = new TwoPassApproach().MaxProduct(numbers);
+        var actualResult = new DynamicApproach().MaxProduct(numbers);
         actualResult.ShouldBe(expectedResult);
     }
 
