@@ -41,6 +41,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DailyCodingProblem.Challeng
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeetCode.Challenges.Benchmark", "LeetCode\tests\LeetCode.Challenges.Benchmark\LeetCode.Challenges.Benchmark.csproj", "{313156CC-B67A-4612-B855-3511FB9ADA2F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackerRank", "HackerRank\src\HackerRank\HackerRank.csproj", "{7122C6FA-5F91-4FE4-BE5A-F9ABCA75D97E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackerRank.UnitTests", "HackerRank\tests\HackerRank.UnitTests\HackerRank.UnitTests.csproj", "{B226221B-D0E4-4B8A-8FCB-13FD18641DC7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -60,6 +64,8 @@ Global
 		{39006CDE-833B-4C8D-B4F6-06178DACAD6B} = {124839A7-881C-4FB7-B856-33360EF29F90}
 		{1621213C-29B4-4FD5-AB25-0FDC816929D6} = {124839A7-881C-4FB7-B856-33360EF29F90}
 		{313156CC-B67A-4612-B855-3511FB9ADA2F} = {DF0B03BA-8B2F-4BF6-B0E4-9B785A20AD82}
+		{7122C6FA-5F91-4FE4-BE5A-F9ABCA75D97E} = {D193EE27-9EE0-4099-8E75-7CA8846A1520}
+		{B226221B-D0E4-4B8A-8FCB-13FD18641DC7} = {3C53C3B2-8DEF-4859-B9AF-555B0B288304}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{14EA13A5-CAC9-46B5-A837-1D1F01B25754}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -98,5 +104,13 @@ Global
 		{313156CC-B67A-4612-B855-3511FB9ADA2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{313156CC-B67A-4612-B855-3511FB9ADA2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{313156CC-B67A-4612-B855-3511FB9ADA2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7122C6FA-5F91-4FE4-BE5A-F9ABCA75D97E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7122C6FA-5F91-4FE4-BE5A-F9ABCA75D97E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7122C6FA-5F91-4FE4-BE5A-F9ABCA75D97E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7122C6FA-5F91-4FE4-BE5A-F9ABCA75D97E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B226221B-D0E4-4B8A-8FCB-13FD18641DC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B226221B-D0E4-4B8A-8FCB-13FD18641DC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B226221B-D0E4-4B8A-8FCB-13FD18641DC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B226221B-D0E4-4B8A-8FCB-13FD18641DC7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
