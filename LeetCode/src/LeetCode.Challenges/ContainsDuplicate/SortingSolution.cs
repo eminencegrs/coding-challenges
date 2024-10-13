@@ -1,6 +1,6 @@
 namespace LeetCode.Challenges.ContainsDuplicate;
 
-// Time Complexity: O(n * log(n)).
+// Time Complexity: O(nlog(n)).
 // Space Complexity: O(log(n)).
 public class SortingSolution
 {

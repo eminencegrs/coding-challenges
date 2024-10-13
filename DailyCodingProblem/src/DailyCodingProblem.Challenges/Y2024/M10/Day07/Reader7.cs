@@ -1,4 +1,4 @@
-namespace DailyCodingProblem.Challenges.Y2024.M10.Day7;
+namespace DailyCodingProblem.Challenges.Y2024.M10.Day07;
 
 public class Reader7
 {
