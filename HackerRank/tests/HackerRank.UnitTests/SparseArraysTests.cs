@@ -28,5 +28,11 @@ public class SparseArraysTests
             new List<string> { "aba", "xzxb", "ab" },
             new List<int> { 2, 1, 0 }
         ];
+        yield return
+        [
+            new List<string> { "abc", "cde", "klm", "abc", "cde", "xyz", "abc", "xyz" },
+            new List<string> { "ab", "bc", "abc", "abcd", "cde", "xy", "xyz", "yz" },
+            new List<int> { 0, 0, 3, 0, 2, 0, 2, 0 }
+        ];
     }
 }
