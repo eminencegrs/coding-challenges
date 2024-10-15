@@ -5,13 +5,13 @@ using Xunit;
 
 namespace DailyCodingProblem.Challenges.UnitTests.Y2024.M10.Day13;
 
-public class BruteForceSolutionTests
+public class BitwiseShiftingSolutionTests
 {
     [Theory]
     [InlineData(-10, 10)]
     public void GivenNegativeDividend_WhenDivide2PositiveIntegers_ThenExceptionThrown(int dividend, int divisor)
     {
-        var action = () => BruteForceSolution.Divide2PositiveIntegers(dividend, divisor);
+        var action = () => BitwiseShiftingSolution.Divide2PositiveIntegers(dividend, divisor);
         action.Should().Throw<ArgumentOutOfRangeException>();
     }
 
@@ -20,7 +20,7 @@ public class BruteForceSolutionTests
     [InlineData(10, 0)]
     public void GivenInvalidDivisor_WhenDivide2PositiveIntegers_ThenExceptionThrown(int dividend, int divisor)
     {
-        var action = () => BruteForceSolution.Divide2PositiveIntegers(dividend, divisor);
+        var action = () => BitwiseShiftingSolution.Divide2PositiveIntegers(dividend, divisor);
         action.Should().Throw<ArgumentOutOfRangeException>();
     }
 
@@ -29,6 +29,6 @@ public class BruteForceSolutionTests
     public void GivenDividendAndDivisor_WhenDivide2PositiveIntegers_ThenResultAsExpected(
         int dividend, int divisor, int expectedResult)
     {
-        BruteForceSolution.Divide2PositiveIntegers(dividend, divisor).ShouldBe(expectedResult);
+        BitwiseShiftingSolution.Divide2PositiveIntegers(dividend, divisor).ShouldBe(expectedResult);
     }
 }

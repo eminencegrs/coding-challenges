@@ -4,6 +4,10 @@ namespace DailyCodingProblem.Challenges.Y2024.M10.Day13;
 // Implement division of two positive integers without using
 // the division, multiplication, or modulus operators.
 // Return the quotient as an integer, ignoring the remainder.
+
+// Time complexity: O(m/n), where:
+//  - `m` is the dividend
+//  - `n` is the divisor
 public static class BruteForceSolution
 {
     public static int Divide2PositiveIntegers(int dividend, int divisor)
