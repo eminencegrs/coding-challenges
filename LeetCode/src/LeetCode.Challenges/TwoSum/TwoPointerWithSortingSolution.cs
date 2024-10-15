@@ -1,5 +1,6 @@
 namespace LeetCode.Challenges.TwoSum;
 
+// Time Complexity: O(nlog(n)).
 public static class TwoPointerWithSortingSolution
 {
     public static int[] GetResult(int[] numbers, int target)

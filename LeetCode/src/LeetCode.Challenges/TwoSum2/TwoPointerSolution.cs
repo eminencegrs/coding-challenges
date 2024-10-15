@@ -5,27 +5,28 @@ public static class TwoPointerSolution
 {
     public static int[] GetResult(int[] numbers, int target)
     {
-        int leftPointer = 0;
-        int rightPointer = numbers.Length - 1;
+        var left = 0;
+        var right = numbers.Length - 1;
 
-        while (leftPointer < rightPointer)
+        while (left < right)
         {
-            int sum = numbers[leftPointer] + numbers[rightPointer];
+            var sum = numbers[left] + numbers[right];
             if (sum == target)
             {
-                return [leftPointer + 1, rightPointer + 1];
+                return [left + 1, right + 1];
             }
 
             if (sum < target)
             {
-                leftPointer++;
+                left++;
             }
             else
             {
-                rightPointer--;
+                right--;
             }
         }
 
-        throw new InvalidOperationException("Solution not found");
+        throw new InvalidOperationException(
+            "The solution was not found because the test data violates the requirements. There must be exactly one solution.");
     }
 }
