@@ -1,10 +1,10 @@
 ﻿namespace LeetCode.Challenges.Fibonacci;
 
-// Time Complexity: O(n)
+// Time Complexity: O(n).
 // Space Complexity: O(1) - because we don't use any data structure that depends on the input `n`.
-public class SolutionV2
+public static class IterativeFibonacci
 {
-    public int Fib(int n)
+    public static int GetResult(int n)
     {
         if (n == 0)
         {

@@ -1,16 +1,16 @@
 ﻿namespace LeetCode.Challenges.Fibonacci;
 
-// Time Complexity: O(n)
-// Space Complexity: O(n)
-public class SolutionV1
+// Time Complexity: O(n).
+// Space Complexity: O(n).
+public static class RecursiveFibonacci
 {
-    public int Fib(int n)
+    public static int GetResult(int n)
     {
         var cache = new Dictionary<int, int>();
-        return Fib(n, ref cache);
+        return Fibonacci(n, ref cache);
     }
 
-    private int Fib(int n, ref Dictionary<int, int> cache)
+    private static int Fibonacci(int n, ref Dictionary<int, int> cache)
     {
         if (n == 0)
         {
@@ -27,7 +27,7 @@ public class SolutionV1
             return val;
         }
 
-        cache[n] = this.Fib(n - 2, ref cache) + this.Fib(n - 1, ref cache);
+        cache[n] = Fibonacci(n - 2, ref cache) + Fibonacci(n - 1, ref cache);
         return cache[n];
     }
 }
