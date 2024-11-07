@@ -2,9 +2,8 @@ using System.Text;
 
 namespace LeetCode.Challenges.TreeSerializationDeserialization;
 
-public class Solution
+public class TreeSerializer
 {
-    // Pre-order traversal.
     public string Serialize(TreeNode? root)
     {
         if (root == null)
@@ -19,10 +18,5 @@ public class Solution
         sb.Append(';');
         sb.Append(this.Serialize(root.Right));
         return sb.ToString();
-    }
-
-    public TreeNode? Deserialize(string tree)
-    {
-        throw new NotImplementedException();
     }
 }
