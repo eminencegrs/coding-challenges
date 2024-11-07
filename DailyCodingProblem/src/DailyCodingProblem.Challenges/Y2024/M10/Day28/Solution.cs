@@ -7,6 +7,7 @@ namespace DailyCodingProblem.Challenges.Y2024.M10.Day28;
 // If there is no substring containing all the characters in the set, return null.
 public class Solution
 {
+    // TODO: Investigate why the unit tests fail.
     public string MinWindow(string input, string characters)
     {
         if (string.IsNullOrEmpty(input) || string.IsNullOrEmpty(characters) || input.Length < characters.Length)
