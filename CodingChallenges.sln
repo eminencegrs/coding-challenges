@@ -45,6 +45,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackerRank", "HackerRank\sr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackerRank.UnitTests", "HackerRank\tests\HackerRank.UnitTests\HackerRank.UnitTests.csproj", "{B226221B-D0E4-4B8A-8FCB-13FD18641DC7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Theory", "Theory", "{FD7B6160-2569-4170-ABBF-BD55BE84405E}"
+	ProjectSection(SolutionItems) = preProject
+		Theory\CommonPattern&Approaches.md = Theory\CommonPattern&Approaches.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
