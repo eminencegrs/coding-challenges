@@ -38,5 +38,7 @@ public class TreeSerializerTests
         };
 
         yield return [root, "5;3;@;4;@;@;2;@;@"];
+        yield return [new TreeNode { Value = 1 }, "1;@;@"];
+        yield return [null!, "@"];
     }
 }
