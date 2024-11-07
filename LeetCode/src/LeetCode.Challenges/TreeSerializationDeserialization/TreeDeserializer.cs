@@ -8,13 +8,13 @@ public class TreeDeserializer
     public TreeNode? Deserialize(string tree)
     {
         ArgumentNullException.ThrowIfNull(tree);
-        this.nodes = tree.Split(";");
 
-        if (this.nodes.Length == 0)
+        if (string.IsNullOrWhiteSpace(tree))
         {
             return null;
         }
 
+        this.nodes = tree.Split(";");
         this.index = 0;
         return this.Dfs();
     }
