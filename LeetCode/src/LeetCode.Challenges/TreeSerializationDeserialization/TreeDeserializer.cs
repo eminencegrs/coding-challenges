@@ -2,17 +2,14 @@ namespace LeetCode.Challenges.TreeSerializationDeserialization;
 
 public class TreeDeserializer
 {
-    private readonly string[] nodes;
+    private string[] nodes = [];
     private int index;
-
-    public TreeDeserializer(string value)
-    {
-        ArgumentNullException.ThrowIfNull(value);
-        this.nodes = value.Split(";");
-    }
 
     public TreeNode? Deserialize(string tree)
     {
+        ArgumentNullException.ThrowIfNull(tree);
+        this.nodes = tree.Split(";");
+
         if (this.nodes.Length == 0)
         {
             return null;
@@ -24,7 +21,7 @@ public class TreeDeserializer
 
     private TreeNode? Dfs()
     {
-        if (this.nodes[this.index].Equals("@"))
+        if (this.nodes[this.index].Equals("@", StringComparison.Ordinal))
         {
             this.index++;
             return null;

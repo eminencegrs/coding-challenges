@@ -10,7 +10,7 @@ public class TreeDeserializerTests
     [MemberData(nameof(TestData))]
     public void GivenString_WhenDeserialize_ThenTreeAsExpected(string inputString, TreeNode expectedResult)
     {
-        var cut = new TreeDeserializer(inputString);
+        var cut = new TreeDeserializer();
         var actualResult = cut.Deserialize(inputString);
         actualResult.ShouldBeEquivalentTo(expectedResult);
     }
