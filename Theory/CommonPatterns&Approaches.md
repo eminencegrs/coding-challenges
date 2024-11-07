@@ -2,7 +2,9 @@
 
 ## Sliding Window
 
-It is a technique used to solve problems involving a subset of elements within an **array** or **sequence**.  
+**It is a technique used to solve problems involving a subset of elements within an array or sequence. 
+It helps to reduce the use of nested loops and replace it with a single loop, thereby reducing the time complexity.**  
+
 It is particularly useful when the goal is to find an optimal range or calculate a specific measurement 
 within a subset of contiguous elements. The main idea is to maintain a "window" that slides across 
 the array from the beginning to the end. This window can vary in size, depending on the problem:
@@ -10,6 +12,15 @@ the array from the beginning to the end. This window can vary in size, depending
  - **Fixed-Size Sliding Window:** Useful for problems that require processing or optimizing over a fixed number of contiguous elements.
 
  - **Variable-Size Sliding Window:** Useful for problems where the window can grow or shrink, often to meet a condition dynamically.
+
+### Use Cases
+
+ - Minimum value
+ - Maximum value
+ - Average Value
+ - Longest value
+ - Shortest value
+ - K-sized value
 
 ### Key Steps
 
