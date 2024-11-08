@@ -249,8 +249,8 @@ public string SerializePostorder(TreeNode? node, string delimiter = ";", string 
         return nullMark;
     }
 
-    var leftSerialized = SerializePreorder(node.Left, delimiter, nullMark);
-    var rightSerialized = SerializePreorder(node.Right, delimiter, nullMark);
+    var leftSerialized = SerializePostorder(node.Left, delimiter, nullMark);
+    var rightSerialized = SerializePostorder(node.Right, delimiter, nullMark);
 
     return $"{leftSerialized}{delimiter}{rightSerialized}{delimiter}{node.Value}";
 }
