@@ -48,6 +48,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Theory", "Theory", "{FD7B6160-2569-4170-ABBF-BD55BE84405E}"
 	ProjectSection(SolutionItems) = preProject
 		Theory\CommonPatterns&Approaches.md = Theory\CommonPatterns&Approaches.md
+		Theory\BinaryTrees.md = Theory\BinaryTrees.md
 	EndProjectSection
 EndProject
 Global
