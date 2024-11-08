@@ -415,6 +415,95 @@ The result of level order traversal: `1;2;3;4;5;#;6;#;#;7;8;#;#;#;#;#;#`.
 <details>
   <summary>Step by step explanation</summary>
 
-// TODO: add steps.
+- **Step 1**: Start at the root node `1` and enqueue it into the queue.  
+  **Current result**: (no nodes visited yet)  
+  **Queue**: `[1]`
+
+- **Step 2**: Dequeue node `1` and process it. Add its value to the result list, 
+              and enqueue its left `2` and right `3` children for future processing.  
+  **Current result**: `1`  
+  **Queue**: `[2, 3]`
+
+- **Step 3**: Dequeue node `2` and process it. Add its value to the result list, 
+              and enqueue its left `4` and right `5` children for future processing.  
+  **Current result**: `1;2`  
+  **Queue**: `[3, 4, 5]`
+
+- **Step 4**: Dequeue node `3` and process it. Add its value to the result list, 
+              and enqueue its left `null` and right `6` children for future processing.  
+  **Current result**: `1;2;3`  
+  **Queue**: `[4, 5, null, 6]`
+
+- **Step 5**: Dequeue node `4` and process it. Add its value to the result list, 
+              and enqueue its left `null` and right `null` children for future processing.  
+  **Current result**: `1;2;3;4`  
+  **Queue**: `[5, null, 6, null, null]`
+
+- **Step 6**: Dequeue node `5` and process it. Add its value to the result list, 
+              and enqueue its left `7` and right `8` children for future processing.  
+  **Current result**: `1;2;3;4;5`  
+  **Queue**: `[null, 6, null, null, 7, 8]`
+
+- **Step 7**: Dequeue node `null` (left child of `3`) and process it. 
+              Add the null marker `#` to the result list.  
+  **Current result**: `1;2;3;4;5;#`  
+  **Queue**: `[6, null, null, 7, 8]`
+
+- **Step 8**: Dequeue node `6` and process it. Add its value to the result list, 
+              and enqueue its left `null` and right `null` children for future processing.  
+  **Current result**: `1;2;3;4;5;#;6`  
+  **Queue**: `[null, null, 7, 8, null, null]`
+
+- **Step 9**: Dequeue node `null` (left child of `6`) and process it. 
+              Add the null marker `#` to the result list.  
+  **Current result**: `1;2;3;4;5;#;6;#`  
+  **Queue**: `[null, 7, 8, null, null]`
+
+- **Step 10**: Dequeue node `null` (right child of `6`) and process it. 
+               Add the null marker `#` to the result list.  
+  **Current result**: `1;2;3;4;5;#;6;#;#`  
+  **Queue**: `[7, 8, null, null]`
+
+- **Step 11**: Dequeue node `7` and process it. Add its value to the result list, 
+               and enqueue its left `null` and right `null` children for future processing.  
+  **Current result**: `1;2;3;4;5;#;6;#;#;7`  
+  **Queue**: `[8, null, null, null, null]`
+
+- **Step 12**: Dequeue node `8` and process it. Add its value to the result list, 
+               and enqueue its left `null` and right `null` children for future processing.  
+  **Current result**: `1;2;3;4;5;#;6;#;#;7;8`  
+  **Queue**: `[null, null, null, null, null, null]`
+
+- **Step 13**: Dequeue node `null` (left child of `7`) and process it. 
+               Add the null marker `#` to the result list.  
+  **Current result**: `1;2;3;4;5;#;6;#;#;7;8;#`  
+  **Queue**: `[null, null, null, null]`
+
+- **Step 14**: Dequeue node `null` (right child of `7`) and process it. 
+               Add the null marker `#` to the result list.  
+  **Current result**: `1;2;3;4;5;#;6;#;#;7;8;#;#`  
+  **Queue**: `[null, null, null]`
+
+- **Step 15**: Dequeue node `null` (left child of `8`) and process it. 
+               Add the null marker `#` to the result list.  
+  **Current result**: `1;2;3;4;5;#;6;#;#;7;8;#;#;#`  
+  **Queue**: `[null, null, null]`
+
+- **Step 16**: Dequeue node `null` (right child of `8`) and process it. 
+               Add the null marker `#` to the result list.  
+  **Current result**: `1;2;3;4;5;#;6;#;#;7;8;#;#;#;#`  
+  **Queue**: `[null, null]`
+
+- **Step 17**: Dequeue node `null` and process it. Add the null marker `#` to the result list.  
+  **Current result**: `1;2;3;4;5;#;6;#;#;7;8;#;#;#;#;#`  
+  **Queue**: `[null]`
+
+- **Step 18**: Dequeue node `null` and process it. Add the null marker `#` to the result list.  
+  **Current result**: `1;2;3;4;5;#;6;#;#;7;8;#;#;#;#;#;#`  
+  **Queue**: `[]`
+
+- **Step 19**: The queue is empty, so the function ends. 
+               The result is joined with the delimiter `;` and returned as the final serialized string:  
+  **Final result**: `1;2;3;4;5;#;6;#;#;7;8;#;#;#;#;#;#`
 
 </details>
