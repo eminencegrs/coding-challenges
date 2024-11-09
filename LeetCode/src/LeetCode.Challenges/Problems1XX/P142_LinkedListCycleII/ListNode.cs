@@ -1,6 +1,6 @@
 using System.Diagnostics.CodeAnalysis;
 
-namespace LeetCode.Challenges.Problems1XX.P141_LinkedListCycle;
+namespace LeetCode.Challenges.Problems1XX.P142_LinkedListCycleII;
 
 [ExcludeFromCodeCoverage]
 public class ListNode(int x)

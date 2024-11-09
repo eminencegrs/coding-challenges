@@ -1,8 +1,8 @@
-using LeetCode.Challenges.Problems1XX.P142_LinkedListCycle2;
+using LeetCode.Challenges.Problems1XX.P142_LinkedListCycleII;
 using Shouldly;
 using Xunit;
 
-namespace LeetCode.Challenges.UnitTests.Problems1XX.P142_LinkedListCycle2;
+namespace LeetCode.Challenges.UnitTests.Problems1XX.P142_LinkedListCycleII;
 
 public class SolutionTests
 {

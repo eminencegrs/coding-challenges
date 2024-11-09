@@ -1,4 +1,4 @@
-namespace LeetCode.Challenges.Problems1XX.P142_LinkedListCycle2;
+namespace LeetCode.Challenges.Problems1XX.P142_LinkedListCycleII;
 
 public static class FloydCycleDetection
 {
