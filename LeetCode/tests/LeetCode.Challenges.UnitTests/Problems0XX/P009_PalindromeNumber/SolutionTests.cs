@@ -20,8 +20,10 @@ public class SolutionTests
         yield return [11, true];
         yield return [121, true];
         yield return [12321, true];
+        yield return [-1, false];
         yield return [12, false];
         yield return [123, false];
+        yield return [100, false];
         yield return [-121, false];
     }
 }
