@@ -15,6 +15,8 @@ public class SolutionTests
 
     public static IEnumerable<object[]> TestData()
     {
+        yield return [null!, -1];
+
         var root = new TreeNode(9)
         {
             Left = new TreeNode(5)
@@ -90,9 +92,6 @@ public class SolutionTests
         };
         yield return [root, 4];
 
-        //           -5
-        //       -10     -15
-        //    -20  -30  -25  -35
         root = new TreeNode(-5)
         {
             Left = new TreeNode(-10)
