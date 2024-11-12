@@ -1,13 +1,10 @@
+using System.Diagnostics.CodeAnalysis;
+
 namespace LeetCode.Challenges.Problems0XX.P024_SwapNodesInPairs;
 
-public class ListNode
+[ExcludeFromCodeCoverage]
+public class ListNode(int value = default, ListNode? next = null)
 {
-    public int val;
-    public ListNode? next;
-
-    public ListNode(int val = 0, ListNode? next = null)
-    {
-        this.val = val;
-        this.next = next;
-    }
+    public int Value { get; set; } = value;
+    public ListNode? Next { get; set; } = next;
 }
