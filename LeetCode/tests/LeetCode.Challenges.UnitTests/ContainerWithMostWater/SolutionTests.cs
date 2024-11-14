@@ -1,4 +1,4 @@
-using LeetCode.Challenges.ContainerWithMostWater;
+using LeetCode.Challenges.Problems00xx.P0011_ContainerWithMostWater;
 using Shouldly;
 using Xunit;
 
@@ -10,7 +10,7 @@ public class SolutionTests
     [MemberData(nameof(TestData))]
     public void GivenHeights_WhenCallGetMaxArea_ThenResultAsExpected(int[] heights, int expectedResult)
     {
-        var actualResult = Solution.GetMaxArea(heights);
+        var actualResult = TwoPointerSolution.GetMaxArea(heights);
         actualResult.ShouldBeEquivalentTo(expectedResult);
     }
 

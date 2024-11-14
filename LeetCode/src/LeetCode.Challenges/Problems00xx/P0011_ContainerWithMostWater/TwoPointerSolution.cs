@@ -1,14 +1,14 @@
-namespace LeetCode.Challenges.ContainerWithMostWater;
+namespace LeetCode.Challenges.Problems00xx.P0011_ContainerWithMostWater;
 
 // Time Complexity:
 // The loop continues until left is no longer less than right.
 // Since left starts from `0` and right starts from `heights.Length - 1`,
 // and one of them is moved closer to the other in each iteration,
-// the loop will execute at most `n - 1` times where `n` is the length of the `heights` array.
+// the loop will execute at most `n - 1` times, where `n` is the length of the `heights` array.
 // The time complexity of the algorithm is O(n).
 // 
 // Space Complexity of the algorithm is O(1).
-public static class Solution
+public static class TwoPointerSolution
 {
     public static int GetMaxArea(int[] heights)
     {
