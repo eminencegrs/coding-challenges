@@ -6,6 +6,7 @@ public class TestData : IEnumerable<object[]>
 {
     public IEnumerator<object[]> GetEnumerator()
     {
+        yield return ["0", true];
         yield return ["10", true];
         yield return ["-10", true];
         yield return ["10.1", true];
@@ -17,6 +18,7 @@ public class TestData : IEnumerable<object[]>
         yield return ["0.1", true];
 
         yield return ["a", false];
+        yield return ["e", false];
         yield return ["x 1", false];
         yield return ["a -2", false];
         yield return ["-", false];
