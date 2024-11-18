@@ -1,5 +1,7 @@
 namespace DailyCodingProblem.Challenges.Y2024.M11.Day18;
 
+// Time Complexity: O(n)
+// Space Complexity: O(1)
 public static class BruteForceSolution
 {
     public static bool CheckIfNumber(string input)
