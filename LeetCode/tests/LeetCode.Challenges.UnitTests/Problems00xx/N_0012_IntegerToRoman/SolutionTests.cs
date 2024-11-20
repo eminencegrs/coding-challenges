@@ -1,16 +1,16 @@
-using LeetCode.Challenges.Problems00xx.N_0013_RomanToInteger;
+using LeetCode.Challenges.Problems00xx.N_0012_IntegerToRoman;
 using Shouldly;
 using Xunit;
 
-namespace LeetCode.Challenges.UnitTests.Problems00xx.N_0013_RomanToInteger;
+namespace LeetCode.Challenges.UnitTests.Problems00xx.N_0012_IntegerToRoman;
 
 public class SolutionTests
 {
     [Theory]
     [MemberData(nameof(TestData))]
-    public void GivenString_WhenRomanToInt_ThenResultAsExpected(string input, int expectedResult)
+    public void GivenInteger_WhenIntToRoman_ThenResultAsExpected(string expectedResult, int input)
     {
-        Solution.RomanToInt(input).ShouldBe(expectedResult);
+        Solution.IntToRoman(input).ShouldBe(expectedResult);
     }
 
     public static IEnumerable<object[]> TestData()
