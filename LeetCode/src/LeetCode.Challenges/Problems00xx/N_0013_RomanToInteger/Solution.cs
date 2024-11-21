@@ -2,6 +2,8 @@ using System.Collections.ObjectModel;
 
 namespace LeetCode.Challenges.Problems00xx.N_0013_RomanToInteger;
 
+// Time Complexity: O(n).
+// Space Complexity: O(1).
 public static class Solution
 {
     public static int RomanToInt(string number)
