@@ -53,6 +53,7 @@ public class SolutionTests
         yield return ["DCCLXXIV", 774];
         yield return ["CMXC", 990];
         yield return ["MCMXCIV", 1994];
+        yield return ["MMMDCCXLIX", 3749];
         yield return ["MMMCMXCIX", 3999];
     }
 }
