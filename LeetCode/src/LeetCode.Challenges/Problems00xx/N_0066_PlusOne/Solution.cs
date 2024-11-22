@@ -7,6 +7,11 @@ public static class Solution
 {
     public static int[] PlusOne(int[] digits)
     {
+        if (digits == null || digits.Length == 0)
+        {
+            throw new ArgumentNullException(nameof(digits));
+        }
+
         for (var i = digits.Length - 1; i >= 0; i--)
         {
             if (digits[i] < 9)
