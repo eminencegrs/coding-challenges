@@ -1,8 +1,8 @@
-using LeetCode.Challenges.PlusOne;
+using LeetCode.Challenges.Problems00xx.N_0066_PlusOne;
 using Shouldly;
 using Xunit;
 
-namespace LeetCode.Challenges.UnitTests.PlusOne;
+namespace LeetCode.Challenges.UnitTests.Problems00xx.N_0066_PlusOne;
 
 public class SolutionTests
 {

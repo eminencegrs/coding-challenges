@@ -1,4 +1,4 @@
-namespace LeetCode.Challenges.PlusOne;
+namespace LeetCode.Challenges.Problems00xx.N_0066_PlusOne;
 
 // Time Complexity: O(n).
 // Space Complexity: O(n) - in the worst case, when all digits are 9, a new array is created.
