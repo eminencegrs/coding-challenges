@@ -1,9 +1,9 @@
-namespace LeetCode.Challenges.ProductOfArrayExceptSelf;
+namespace LeetCode.Challenges.Problems02xx.N_0238_ProductOfArrayExceptSelf;
 
 // Time Complexity: O(n).
-public class Solution
+public static class Solution
 {
-    public int[] ProductExceptSelf(int[] numbers)
+    public static int[] ProductExceptSelf(int[] numbers)
     {
         if (numbers.Length == 0)
         {
