@@ -1,8 +1,8 @@
-using LeetCode.Challenges.RemoveAdjacentDuplicates2;
+using LeetCode.Challenges.Problems12xx.N_1209_RemoveAllAdjacentDuplicatesInStringII;
 using Shouldly;
 using Xunit;
 
-namespace LeetCode.Challenges.UnitTests.RemoveAdjacentDuplicates2;
+namespace LeetCode.Challenges.UnitTests.Problems12xx.N_1209_RemoveAllAdjacentDuplicatesInStringII;
 
 public class SolutionTests
 {

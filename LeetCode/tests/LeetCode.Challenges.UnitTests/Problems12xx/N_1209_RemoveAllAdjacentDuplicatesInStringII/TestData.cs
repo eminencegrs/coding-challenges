@@ -1,6 +1,6 @@
 using System.Collections;
 
-namespace LeetCode.Challenges.UnitTests.RemoveAdjacentDuplicates2;
+namespace LeetCode.Challenges.UnitTests.Problems12xx.N_1209_RemoveAllAdjacentDuplicatesInStringII;
 
 public class TestData : IEnumerable<object[]>
 {

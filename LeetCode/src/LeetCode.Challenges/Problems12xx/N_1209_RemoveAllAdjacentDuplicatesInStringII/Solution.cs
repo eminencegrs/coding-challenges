@@ -1,6 +1,6 @@
 using System.Text;
 
-namespace LeetCode.Challenges.RemoveAdjacentDuplicates2;
+namespace LeetCode.Challenges.Problems12xx.N_1209_RemoveAllAdjacentDuplicatesInStringII;
 
 public class Solution
 {
