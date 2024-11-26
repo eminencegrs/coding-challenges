@@ -4,11 +4,11 @@ using Xunit;
 
 namespace LeetCode.Challenges.UnitTests.Problems01xx.N_0100_SameTree;
 
-public class TreeSerializerTests
+public class SolutionTests
 {
     [Theory]
     [MemberData(nameof(TestData))]
-    public void GivenTree_WhenSerialize_ThenStringAsExpected(
+    public void GivenTree_WhenIsSameTree_ThenResultAsExpected(
         TreeNode first, TreeNode second, bool expectedResult)
     {
         Solution.IsSameTree(first, second).ShouldBe(expectedResult);
