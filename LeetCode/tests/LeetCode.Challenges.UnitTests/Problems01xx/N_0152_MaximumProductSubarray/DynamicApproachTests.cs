@@ -1,16 +1,16 @@
-using LeetCode.Challenges.MaxProductSubarray;
+using LeetCode.Challenges.Problems01xx.N_0152_MaximumProductSubarray;
 using Shouldly;
 using Xunit;
 
-namespace LeetCode.Challenges.UnitTests.MaxProductSubarray;
+namespace LeetCode.Challenges.UnitTests.Problems01xx.N_0152_MaximumProductSubarray;
 
-public class TwoPassApproachTests
+public class DynamicApproachTests
 {
     [Theory]
     [MemberData(nameof(TestData))]
     public void GivenNumbers_WhenMaxProduct_ThenResultAsExpected(int[] numbers, int expectedResult)
     {
-        var actualResult = new TwoPassApproach().MaxProduct(numbers);
+        var actualResult = new DynamicApproach().MaxProduct(numbers);
         actualResult.ShouldBe(expectedResult);
     }
 

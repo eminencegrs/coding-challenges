@@ -1,4 +1,4 @@
-namespace LeetCode.Challenges.MaxProductSubarray;
+namespace LeetCode.Challenges.Problems01xx.N_0152_MaximumProductSubarray;
 
 // Time Complexity: O(n).
 public class TwoPassApproach
