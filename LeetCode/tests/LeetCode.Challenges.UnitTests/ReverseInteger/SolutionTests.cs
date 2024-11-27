@@ -8,7 +8,7 @@ public class SolutionTests
 {
     [Theory]
     [MemberData(nameof(TestData))]
-    public void GivenNumbers_WhenMaxProduct_ThenResultAsExpected(int number, int expectedResult)
+    public void GivenNumber_WhenReverse_ThenResultAsExpected(int number, int expectedResult)
     {
         Solution.Reverse(number).ShouldBe(expectedResult);
     }

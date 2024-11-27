@@ -8,7 +8,7 @@ public class SolutionTests
 {
     [Theory]
     [MemberData(nameof(TestData))]
-    public void GivenNumbers_WhenAddTwoNumbers_ThenResultAsExpected(int[] first, int[] second, int[] total)
+    public void GivenTwoNumbers_WhenAddTwoNumbers_ThenResultAsExpected(int[] first, int[] second, int[] total)
     {
         var a = GetListNodeFromArray(first);
         var b = GetListNodeFromArray(second);

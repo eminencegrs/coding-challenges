@@ -8,7 +8,7 @@ public class SolutionV2Tests
 {
     [Theory]
     [MemberData(nameof(CoinChangeTestCases))]
-    public void CoinChange_ShouldReturnExpectedResult(int[] coins, int amount, int expected)
+    public void GivenCoins_WhenCoinChange_ThenResultAsExpected(int[] coins, int amount, int expected)
     {
         SolutionV2.CoinChange(coins, amount).ShouldBe(expected);
     }
