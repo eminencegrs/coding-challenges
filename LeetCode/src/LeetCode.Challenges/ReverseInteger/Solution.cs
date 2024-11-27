@@ -1,8 +1,8 @@
 namespace LeetCode.Challenges.ReverseInteger;
 
-public class Solution
+public static class Solution
 {
-    public int Reverse(int x)
+    public static int Reverse(int x)
     {
         int result = 0;
 

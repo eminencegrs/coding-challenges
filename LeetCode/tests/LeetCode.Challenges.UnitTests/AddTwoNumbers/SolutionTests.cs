@@ -19,38 +19,38 @@ public class SolutionTests
     }
 
     // TODO: It's a helper method. Improve it.
-    private static Solution.ListNode? GetListNodeFromArray(int[] num1)
+    private static ListNode? GetListNodeFromArray(int[] num1)
     {
-        Solution.ListNode? node = null;
+        ListNode? node = null;
         for (var i = num1.Length - 1; i >= 0; i--)
         {
             if (node == null)
             {
-                node = new Solution.ListNode(num1[i]);
+                node = new ListNode(num1[i]);
             }
             else
             {
                 var temp = node;
-                node = new Solution.ListNode(num1[i], temp);
+                node = new ListNode(num1[i], temp);
             }
         }
 
         return node;
     }
 
-    // TODO: verify if it works.
-    private static Solution.ListNode ConvertArrayIntoListNode(int[] num)
+    // TODO: verify if it works properly.
+    private static ListNode ConvertArrayIntoListNode(int[] num)
     {
         // Create a dummy node to simplify list construction.
-        Solution.ListNode dummy = new Solution.ListNode();
-        Solution.ListNode current = dummy;
+        ListNode dummy = new ListNode();
+        ListNode current = dummy;
 
         // Iterate through the array in reverse order to ensure consistency with the problem requirements,
         // where the digits are stored in reverse order within the linked lists.
         for (int i = num.Length - 1; i >= 0; i--)
         {
             // Create a new node with the current value.
-            current.Next = new Solution.ListNode(num[i]);
+            current.Next = new ListNode(num[i]);
 
             // Move to the next node
             current = current.Next;
