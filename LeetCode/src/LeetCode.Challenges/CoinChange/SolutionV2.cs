@@ -3,9 +3,9 @@
 // This is an optimized solution based on a bottom-up dynamic programming approach instead of recursion.
 // This approach iterates through each possible amount from 1 to the target amount,
 // calculating the minimum number of coins needed to make up each amount.
-public class SolutionV2
+public static class SolutionV2
 {
-    public int CoinChange(int[] coins, int amount)
+    public static int CoinChange(int[] coins, int amount)
     {
         // Initialize an array to store the minimum number of coins needed for each amount.
         var amountMins = new int[amount + 1];
