@@ -9,15 +9,6 @@ and understanding common patterns in coding interviews.
 The repository is organized into multiple sections to streamline access to different types of content. 
 Each section focuses on a unique platform, making it easy to explore specific challenges and solutions.
 
-### Theory
-
-This section contains theoretical explanations and common patterns used in algorithm design and problem-solving. 
-It covers foundational concepts like the sliding window technique, dynamic programming, and recursion, 
-which are frequently applied in coding challenges.
-
- - [Common Patterns & Approaches](./Theory/CommonPatterns&Approaches.md)
- - [Binary Trees & Traversal Types](./Theory/BinaryTrees.md)
-
 ### [DailyCodingProblem](./DailyCodingProblem/README.md)
 
 This section includes solutions to problems from *Daily Coding Problem*, 
@@ -36,6 +27,15 @@ This section holds solutions to *LeetCode* problems,
 one of the most widely used platforms for interview preparation. 
 LeetCode challenges cover a wide range of topics and difficulty levels, 
 making it ideal for preparing for technical interviews in software development.
+
+## Theory
+
+This section contains theoretical explanations and common patterns used in algorithm design and problem-solving.
+It covers foundational concepts like the sliding window technique, dynamic programming, and recursion,
+which are frequently applied in coding challenges.
+
+- [Common Patterns & Approaches](./Theory/CommonPatterns&Approaches.md)
+- [Binary Trees & Traversal Types](./Theory/BinaryTrees.md)
 
 ## Build & Code Coverage
 
