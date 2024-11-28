@@ -507,3 +507,25 @@ The result of level order traversal: `1;2;3;4;5;#;6;#;#;7;8;#;#;#;#;#;#`.
   **Final result**: `1;2;3;4;5;#;6;#;#;7;8;#;#;#;#;#;#`
 
 </details>
+
+## Tree Depth
+
+ - The **depth** of a binary tree is the number of edges on the path from the root to a given node.
+ - The **max depth** of a binary tree is the length of the longest path from the root node to any leaf node.
+
+The **max depth** of a binary tree can be computed recursively:
+
+1. If the tree is empty (no nodes, the root node is `null`), then the max depth is `0`.
+2. Otherwise: `MaxDepth = 1 + Math.Max(MaxDepth(root.Left), MaxDepth(root.Right))
+
+#### Example:
+
+```
+        1
+       / \
+      2   3
+     / \
+    4   5
+```
+
+The max depth of this tree is **3**.
