@@ -516,7 +516,7 @@ The result of level order traversal: `1;2;3;4;5;#;6;#;#;7;8;#;#;#;#;#;#`.
 The **max depth** of a binary tree can be computed recursively:
 
 1. If the tree is empty (no nodes, the root node is `null`), then the max depth is `0`.
-2. Otherwise: `MaxDepth = 1 + Math.Max(MaxDepth(root.Left), MaxDepth(root.Right))
+2. Otherwise: `MaxDepth = 1 + Math.Max(MaxDepth(root.Left), MaxDepth(root.Right))`.
 
 #### Example:
 
