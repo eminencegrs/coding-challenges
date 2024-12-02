@@ -1,6 +1,6 @@
 namespace LeetCode.Challenges.Problems00xx.N_0094_BinaryTreeInorderTraversal;
 
-public class Solution
+public class BinaryTreeTraverser
 {
     public IList<int> InorderTraversal(TreeNode? root)
     {

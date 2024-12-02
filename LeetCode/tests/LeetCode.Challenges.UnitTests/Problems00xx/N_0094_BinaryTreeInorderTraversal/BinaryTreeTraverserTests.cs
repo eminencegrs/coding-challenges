@@ -4,13 +4,13 @@ using Xunit;
 
 namespace LeetCode.Challenges.UnitTests.Problems00xx.N_0094_BinaryTreeInorderTraversal;
 
-public class SolutionTests
+public class BinaryTreeTraverserTests
 {
     [Theory]
     [MemberData(nameof(TestData))]
     public void GivenTree_WhenInorderTraversal_ThenResultAsExpected(TreeNode root, IList<int> expectedResult)
     {
-        var actualResult = new Solution().InorderTraversal(root);
+        var actualResult = new BinaryTreeTraverser().InorderTraversal(root);
         actualResult.ShouldBeEquivalentTo(expectedResult);
     }
 
