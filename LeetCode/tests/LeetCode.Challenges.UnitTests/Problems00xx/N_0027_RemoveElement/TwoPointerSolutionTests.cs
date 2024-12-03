@@ -22,6 +22,7 @@ public class TwoPointerSolutionTests
 
     public static IEnumerable<object[]> TestData()
     {
+        yield return [Array.Empty<int>(), 0, Array.Empty<int>(), 0];
         yield return [new[] { 1 }, 1, new[] { 1 }, 0];
         yield return [new[] { 3, 2, 2, 3 }, 3, new[] { 2, 2, 3, 3 }, 2];
         yield return [new[] { 2, 2, 3 }, 2, new[] { 3, 2, 2 }, 1];
