@@ -30,6 +30,31 @@ public class SolutionTests
                             4, new ListNode(4))))));
         yield return [first, second, expectedResult];
 
+        // 1 --> 1 --> 2
+        // 2 --> 2 --> 3 --> 4
+        first = new ListNode(1, new ListNode(1, new ListNode(2)));
+        second = new ListNode(2, new ListNode(2, new ListNode(3, new ListNode(4))));
+        expectedResult = new ListNode(
+            1, new ListNode(
+                1, new ListNode(
+                    2, new ListNode(
+                        2, new ListNode(
+                            2, new ListNode(
+                                3, new ListNode(4)))))));
+        yield return [first, second, expectedResult];
+
+        // 1 --> 2 --> 3 --> 5
+        // 2 --> 3
+        first = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(5))));
+        second = new ListNode(2, new ListNode(3));
+        expectedResult = new ListNode(
+            1, new ListNode(
+                2, new ListNode(
+                    2, new ListNode(
+                        3, new ListNode(
+                            3, new ListNode(5))))));
+        yield return [first, second, expectedResult];
+
         first = new ListNode(1);
         expectedResult = new ListNode(1);
         yield return [first, null!, expectedResult];
