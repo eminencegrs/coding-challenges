@@ -8,10 +8,10 @@ public class SolutionTests
 {
     [Theory]
     [MemberData(nameof(TestData))]
-    public void GivenStrings_WhenLongestCommonPrefix_ThenResultAsExpected(
+    public void GivenStrings_WhenFindLongestCommonPrefix_ThenResultAsExpected(
         string[] strings, string expectedResult)
     {
-        Solution.LongestCommonPrefix(strings).ShouldBe(expectedResult);
+        Solution.FindLongestCommonPrefix(strings).ShouldBe(expectedResult);
     }
 
     public static IEnumerable<object[]> TestData()

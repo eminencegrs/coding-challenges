@@ -11,7 +11,7 @@ public static class Solution
     //    -- Repeat this until the prefix matches the start of the current string or becomes empty.
     // 4. If at any point the prefix becomes empty, return an empty string (no common prefix exists).
     // 5. After all strings are processed, the prefix will contain the longest common prefix.
-    public static string LongestCommonPrefix(string[] strings)
+    public static string FindLongestCommonPrefix(string[] strings)
     {
         if (strings == null! || strings.Length == 0)
         {

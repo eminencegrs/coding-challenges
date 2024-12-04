@@ -8,7 +8,7 @@ public class SolutionTests
 {
     [Theory]
     [MemberData(nameof(TestData))]
-    public void GivenNumber_WhenCallIsPalindrome_ThenResultAsExpected(int number, bool expectedResult)
+    public void GivenNumber_WhenIsPalindrome_ThenResultAsExpected(int number, bool expectedResult)
     {
         Solution.IsPalindrome(number).ShouldBe(expectedResult);
     }

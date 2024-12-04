@@ -8,7 +8,7 @@ public class SolutionTests
 {
     [Theory]
     [MemberData(nameof(TestData))]
-    public void GivenStringAndPattern_WhenCallIsMatch_ThenResultAsExpected(
+    public void GivenStringAndPattern_WhenCallIsMatch_ThenNotImplementedExceptionThrown(
         string str, string pattern, bool expectedResult)
     {
         var action = () => Solution.IsMatch(str, pattern);

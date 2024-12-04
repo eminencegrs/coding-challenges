@@ -23,6 +23,12 @@ public class SolutionTests
         actualResult.SequenceEqual(expectedResult).ShouldBeTrue();
     }
 
+    public static IEnumerable<object[]> NegativeTestCases()
+    {
+        yield return [null!];
+        yield return [Array.Empty<int>()];
+    }
+
     public static IEnumerable<object[]> PositiveTestCases()
     {
         yield return [new[] { 0 }, new[] { 1 }];
@@ -35,11 +41,5 @@ public class SolutionTests
         yield return [new[] { 9, 9, 9, 9, 9, 9, 9 }, new[] { 1, 0, 0, 0, 0, 0, 0, 0 } ];
         yield return [new[] { 1, 2, 3, 4, 5, 6, 7, 8 }, new[] { 1, 2, 3, 4, 5, 6, 7, 9 } ];
         yield return [new[] { 9, 8, 7, 6, 5, 4, 3, 2, 1 }, new[] { 9, 8, 7, 6, 5, 4, 3, 2, 2 } ];
-    }
-
-    public static IEnumerable<object[]> NegativeTestCases()
-    {
-        yield return [null!];
-        yield return [Array.Empty<int>()];
     }
 }
