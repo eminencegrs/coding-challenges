@@ -1,6 +1,6 @@
 namespace LeetCode.Challenges.Problems00xx.N_0036_ValidSudoku;
 
-public static class Solution
+public static class SolutionV1
 {
     private const int BoardSize = 9;
 

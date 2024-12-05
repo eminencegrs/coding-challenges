@@ -1,19 +1,10 @@
-using LeetCode.Challenges.Problems00xx.N_0036_ValidSudoku;
-using Shouldly;
-using Xunit;
+using System.Collections;
 
 namespace LeetCode.Challenges.UnitTests.Problems00xx.N_0036_ValidSudoku;
 
-public class SolutionTests
+public class TestData : IEnumerable<object[]>
 {
-    [Theory]
-    [MemberData(nameof(TestData))]
-    public void GivenBoard_WhenIsValidSudoku_ThenResultAsExpected(char[][] board, bool expectedResult)
-    {
-        Solution.IsValidSudoku(board).ShouldBe(expectedResult);
-    }
-
-    public static IEnumerable<object[]> TestData()
+    public IEnumerator<object[]> GetEnumerator()
     {
         var board = new char[][]
         {
@@ -45,4 +36,6 @@ public class SolutionTests
 
         yield return [board, false];
     }
+
+    IEnumerator IEnumerable.GetEnumerator() => this.GetEnumerator();
 }
