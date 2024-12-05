@@ -16,6 +16,8 @@ Please, note:
 
 ### Example 1:
 
+![Sudoku Board](Sudoku.png)
+
 Input: `board` =
 ```
 [
