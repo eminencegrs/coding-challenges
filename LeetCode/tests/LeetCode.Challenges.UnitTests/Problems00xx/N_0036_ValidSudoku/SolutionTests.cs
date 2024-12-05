@@ -1,5 +1,5 @@
-using FluentAssertions;
 using LeetCode.Challenges.Problems00xx.N_0036_ValidSudoku;
+using Shouldly;
 using Xunit;
 
 namespace LeetCode.Challenges.UnitTests.Problems00xx.N_0036_ValidSudoku;
@@ -8,11 +8,9 @@ public class SolutionTests
 {
     [Theory]
     [MemberData(nameof(TestData))]
-    public void GivenBoard_WhenIsValidSudoku_ThenNotImplementedExceptionThrown(
-        char[][] board, bool expectedResult)
+    public void GivenBoard_WhenIsValidSudoku_ThenResultAsExpected(char[][] board, bool expectedResult)
     {
-        var action = () => Solution.IsValidSudoku(board);
-        action.Should().Throw<NotImplementedException>();
+        Solution.IsValidSudoku(board).ShouldBe(expectedResult);
     }
 
     public static IEnumerable<object[]> TestData()
