@@ -1,19 +1,10 @@
-using LeetCode.Challenges.Problems00xx.N_0046_Permutations;
-using Shouldly;
-using Xunit;
+using System.Collections;
 
 namespace LeetCode.Challenges.UnitTests.Problems00xx.N_0046_Permutations;
 
-public class SolutionTests
+public class TestData : IEnumerable<object[]>
 {
-    [Theory]
-    [MemberData(nameof(TestData))]
-    public void GivenNumbers_WhenPermute_ThenResultAsExpected(int[] numbers, IList<IList<int>> expectedResult)
-    {
-        Solution.Permute(numbers).ShouldBeEquivalentTo(expectedResult);
-    }
-
-    public static IEnumerable<object[]> TestData()
+    public IEnumerator<object[]> GetEnumerator()
     {
         yield return
         [
@@ -48,4 +39,6 @@ public class SolutionTests
             }
         ];
     }
+
+    IEnumerator IEnumerable.GetEnumerator() => this.GetEnumerator();
 }

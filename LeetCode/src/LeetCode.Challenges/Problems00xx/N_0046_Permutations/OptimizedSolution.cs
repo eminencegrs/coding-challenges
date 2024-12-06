@@ -4,7 +4,7 @@ namespace LeetCode.Challenges.Problems00xx.N_0046_Permutations;
 //  - choices: the range of decisions at each step.
 //  - constraints: the rules to filter valid choices.
 //  - goal: the condition to stop recursion.
-public static class Solution
+public static class OptimizedSolution
 {
     public static IList<IList<int>> Permute(int[] numbers)
     {
