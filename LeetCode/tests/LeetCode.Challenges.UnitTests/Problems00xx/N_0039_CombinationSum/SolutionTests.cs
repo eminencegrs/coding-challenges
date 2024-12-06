@@ -8,7 +8,7 @@ public class SolutionTests
 {
     [Theory]
     [MemberData(nameof(TestData))]
-    public void GivenBoard_WhenIsValidSudoku_ThenResultAsExpected(
+    public void GivenNumbers_WhenCombinationSum_ThenResultAsExpected(
         int[] candidates, int target, IList<IList<int>> expectedResult)
     {
         Solution.CombinationSum(candidates, target).ShouldBeEquivalentTo(expectedResult);
