@@ -4,15 +4,13 @@ using Xunit;
 
 namespace LeetCode.Challenges.UnitTests.Problems00xx.N_0077_Combinations;
 
-public class BacktrackingTests
+public class SolutionTests
 {
     [Theory]
     [MemberData(nameof(TestCases))]
     public void GivenNandK_WhenCombine_ThenResultAsExpected(int n, int k, List<List<int>> expectedResult)
     {
-        var cut = new Backtracking();
-        var actualResult = cut.Combine(n, k);
-        actualResult.Should().BeEquivalentTo(expectedResult);
+        Solution.Combine(n, k).Should().BeEquivalentTo(expectedResult);
     }
 
     public static IEnumerable<object[]> TestCases()
