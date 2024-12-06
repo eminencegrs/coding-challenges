@@ -16,12 +16,7 @@ public class SolutionTests
 
     public static IEnumerable<object[]> TestData()
     {
-        yield return
-        [
-            new[] { 2 },
-            1,
-            Enumerable.Empty<IList<int>>().ToList()
-        ];
+        yield return [new[] { 2 }, 1, Enumerable.Empty<IList<int>>().ToList()];
 
         yield return
         [
