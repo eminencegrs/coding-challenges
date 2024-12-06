@@ -24,14 +24,11 @@ public static class Solution
 
             foreach (var number in numbers)
             {
-                // Skip already used numbers.
-                if (current.Contains(number))
+                // Add the number to the current permutation or skip if it is already among used numbers.
+                if (!current.Add(number))
                 {
                     continue;
                 }
-
-                // Add the number to the current permutation.
-                current.Add(number);
 
                 // Recurse to build the next step of the permutation.
                 Dfs(current);
