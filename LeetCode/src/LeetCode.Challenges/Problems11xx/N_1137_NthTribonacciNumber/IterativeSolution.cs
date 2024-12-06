@@ -1,8 +1,8 @@
-namespace LeetCode.Challenges.Tribonacci;
+namespace LeetCode.Challenges.Problems11xx.N_1137_NthTribonacciNumber;
 
-public class IterativeSolution
+public static class IterativeSolution
 {
-    public int Tribonacci(int n)
+    public static int Tribonacci(int n)
     {
         ArgumentOutOfRangeException.ThrowIfNegative(n);
 
@@ -10,11 +10,11 @@ public class IterativeSolution
         {
             0 => 0,
             <= 2 => 1,
-            _ => this.TribInternal(n)
+            _ => TribonacciInternal(n)
         };
     }
 
-    private int TribInternal(int n)
+    private static int TribonacciInternal(int n)
     {
         var firstItem = 0;
         var secondItem = 1;

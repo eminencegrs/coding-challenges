@@ -1,6 +1,6 @@
 using System.Collections;
 
-namespace LeetCode.Challenges.UnitTests.Tribonacci;
+namespace LeetCode.Challenges.UnitTests.Problems11xx.N_1137_NthTribonacciNumber;
 
 public class TestData : IEnumerable<object[]>
 {

@@ -33,6 +33,7 @@
 
     <ItemGroup>
       <Folder Include="ClimbingStairs\" />
+      <Folder Include="Problems11xx\" />
       <Folder Include="Problems12xx\" />
     </ItemGroup>
 

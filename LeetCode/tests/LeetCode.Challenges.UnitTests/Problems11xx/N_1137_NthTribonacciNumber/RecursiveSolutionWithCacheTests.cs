@@ -1,8 +1,8 @@
-using LeetCode.Challenges.Tribonacci;
+using LeetCode.Challenges.Problems11xx.N_1137_NthTribonacciNumber;
 using Shouldly;
 using Xunit;
 
-namespace LeetCode.Challenges.UnitTests.Tribonacci;
+namespace LeetCode.Challenges.UnitTests.Problems11xx.N_1137_NthTribonacciNumber;
 
 public class RecursiveSolutionWithCacheTests
 {
@@ -10,7 +10,6 @@ public class RecursiveSolutionWithCacheTests
     [ClassData(typeof(TestData))]
     public void GivenNumber_WhenRecursiveTribonacci_ThenResultAsExpected(int input, int expectedResult)
     {
-        var actualResult = new RecursiveSolutionWithCache().Tribonacci(input);
-        actualResult.ShouldBe(expectedResult);
+        RecursiveSolutionWithCache.Tribonacci(input).ShouldBe(expectedResult);
     }
 }
