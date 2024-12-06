@@ -1,7 +1,6 @@
 namespace LeetCode.Challenges.Problems00xx.N_0046_Permutations;
 
-// Notes:
-// There are 3 keys points of backtracking:
+// Please, note: there are 3 keys points of backtracking:
 //  - choices: the range of decisions at each step.
 //  - constraints: the rules to filter valid choices.
 //  - goal: the condition to stop recursion.
@@ -10,31 +9,37 @@ public static class Solution
     public static IList<IList<int>> Permute(int[] numbers)
     {
         var result = new List<IList<int>>();
+        var used = new bool[numbers.Length];
         Dfs([]);
         return result;
 
-        void Dfs(HashSet<int> current)
+        void Dfs(IList<int> current)
         {
             // Base case: all numbers are included in the current permutation.
             if (current.Count == numbers.Length)
             {
-                result.Add(current.ToList());
+                result.Add(new List<int>(current));
                 return;
             }
 
-            foreach (var number in numbers)
+            for (int i = 0; i < numbers.Length; i++)
             {
-                // Add the number to the current permutation or skip if it is already among used numbers.
-                if (!current.Add(number))
+                // Skip used numbers.
+                if (used[i])
                 {
                     continue;
                 }
 
+                // Choose the current number and mark it as used.
+                used[i] = true;
+                current.Add(numbers[i]);
+
                 // Recurse to build the next step of the permutation.
                 Dfs(current);
 
-                // Backtrack: remove the last choice to explore others.
-                current.Remove(number);
+                // Backtrack: undo the choice.
+                current.RemoveAt(current.Count - 1);
+                used[i] = false;
             }
         }
     }
