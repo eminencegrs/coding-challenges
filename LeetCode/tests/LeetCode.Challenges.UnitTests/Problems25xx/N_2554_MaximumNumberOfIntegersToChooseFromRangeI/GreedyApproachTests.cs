@@ -4,7 +4,7 @@ using Xunit;
 
 namespace LeetCode.Challenges.UnitTests.Problems25xx.N_2554_MaximumNumberOfIntegersToChooseFromRangeI;
 
-public class SolutionTests
+public class GreedyApproachTests
 {
     [Theory]
     [ClassData(typeof(TestData))]
