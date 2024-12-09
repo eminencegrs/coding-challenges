@@ -8,7 +8,7 @@ public class SolutionTests
 {
     [Theory]
     [MemberData(nameof(TestData))]
-    public void GivenTree_WhenSerialize_ThenStringAsExpected(TreeNode root, IList<string> expectedResult)
+    public void GivenTreeNode_WhenBinaryTreePaths_ThenResultAsExpected(TreeNode root, IList<string> expectedResult)
     {
         Solution.BinaryTreePaths(root).Should().BeEquivalentTo(expectedResult);
     }

@@ -8,7 +8,8 @@ public class Day07Tests
 {
     [Theory]
     [MemberData(nameof(TestData))]
-    public void GivenNumbers_WhenGetResultByUsingBruteForce_ThenResultAsExpected(int[][] numbers, int expectedResult)
+    public void GivenNumbers_WhenGetResultByUsingBruteForce_ThenResultAsExpected(
+        int[][] numbers, int expectedResult)
     {
         Day07Task.GetMinNumberOfRooms(numbers).ShouldBe(expectedResult);
     }

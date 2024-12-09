@@ -8,7 +8,7 @@ public class SolutionTests
 {
     [Theory]
     [MemberData(nameof(TestData))]
-    public void GivenTree_WhenGetTreeLevelWithMinSum_ThenResultAsExpected(TreeNode root, int expected)
+    public void GivenTreeNode_WhenGetTreeLevelWithMinSum_ThenResultAsExpected(TreeNode root, int expected)
     {
         Solution.GetTreeLevelWithMinSum(root).ShouldBe(expected);
     }

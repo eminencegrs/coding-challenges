@@ -17,18 +17,18 @@ public class Day16Tests
 
     public static IEnumerable<object[]> TestData()
     {
-        yield return [ 0, 0, 0 ];
-        yield return [ 0, 1, 0 ];
-        yield return [ 1, 0, 1 ];
-        yield return [ 1, 1, 1 ];
-        yield return [ -2, -2, (1.0/4) ];
-        yield return [ -2, 2, 4 ];
-        yield return [ -2, -3, (-1.0/8) ];
-        yield return [ -2, 3, -8 ];
-        yield return [ 2, -3, (1.0/8) ];
-        yield return [ 2, 3, 8 ];
-        yield return [ 2, 10, 1024 ];
-        yield return [ 3, -3, (1.0/27) ];
-        yield return [ 3, 3, 27 ];
+        yield return [0, 0, 0];
+        yield return [0, 1, 0];
+        yield return [1, 0, 1];
+        yield return [1, 1, 1];
+        yield return [-2, -2, (1.0 / 4)];
+        yield return [-2, 2, 4];
+        yield return [-2, -3, (-1.0 / 8)];
+        yield return [-2, 3, -8];
+        yield return [2, -3, (1.0 / 8)];
+        yield return [2, 3, 8];
+        yield return [2, 10, 1024];
+        yield return [3, -3, (1.0 / 27)];
+        yield return [3, 3, 27];
     }
 }

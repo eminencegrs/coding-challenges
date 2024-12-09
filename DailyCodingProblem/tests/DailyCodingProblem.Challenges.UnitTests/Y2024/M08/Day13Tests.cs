@@ -16,25 +16,25 @@ public class Day18Tests
 
     public static IEnumerable<object[]> TestData()
     {
-        yield return [ "()", true ];
-        yield return [ ")(", false ];
-        yield return [ "[]", true ];
-        yield return [ "][", false ];
-        yield return [ "{}", true ];
-        yield return [ "}{", false ];
-        yield return [ "()[]{}", true ];
-        yield return [ "[]{}()", true ];
-        yield return [ "{}()[]", true ];
-        yield return [ "([{}])", true ];
-        yield return [ "([{([{}])}])", true ];
-        yield return [ "([])[{}]{()}", true ];
-        yield return [ "{[()]}([{}])", true ];
-        yield return [ ")[()]", false ];
-        yield return [ "([])[", false ];
-        yield return [ "(}[)", false ];
-        yield return [ "((()", false ];
-        yield return [ "()))", false ];
-        yield return [ "[[[[[[[[[[]]]]]]]]]", false ];
-        yield return [ "{{{{{{{{{}}}}}}}}}}", false ];
+        yield return ["()", true];
+        yield return [")(", false];
+        yield return ["[]", true];
+        yield return ["][", false];
+        yield return ["{}", true];
+        yield return ["}{", false];
+        yield return ["()[]{}", true];
+        yield return ["[]{}()", true];
+        yield return ["{}()[]", true];
+        yield return ["([{}])", true];
+        yield return ["([{([{}])}])", true];
+        yield return ["([])[{}]{()}", true];
+        yield return ["{[()]}([{}])", true];
+        yield return [")[()]", false];
+        yield return ["([])[", false];
+        yield return ["(}[)", false];
+        yield return ["((()", false];
+        yield return ["()))", false];
+        yield return ["[[[[[[[[[[]]]]]]]]]", false];
+        yield return ["{{{{{{{{{}}}}}}}}}}", false];
     }
 }

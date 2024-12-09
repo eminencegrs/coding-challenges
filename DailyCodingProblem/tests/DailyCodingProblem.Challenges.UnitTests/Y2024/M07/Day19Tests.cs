@@ -25,10 +25,10 @@ public class Day19Tests
 
     public static IEnumerable<object[]> TestData()
     {
-        yield return [ new [] { 1, 2, 3, 4, 5 }, new [] { 120, 60, 40, 30, 24 } ];
-        yield return [ new [] { 3, 2, 1 }, new [] { 2, 3, 6 } ];
-        yield return [ new [] { -3, -2, 1 }, new [] { -2, -3, 6 } ];
-        yield return [ new [] { 0, 4, 7 }, new [] { 0, 0, 0 } ];
-        yield return [ Array.Empty<int>(), Array.Empty<int>() ];
+        yield return [new[] { 1, 2, 3, 4, 5 }, new[] { 120, 60, 40, 30, 24 }];
+        yield return [new[] { 3, 2, 1 }, new[] { 2, 3, 6 }];
+        yield return [new[] { -3, -2, 1 }, new[] { -2, -3, 6 }];
+        yield return [new[] { 0, 4, 7 }, new[] { 0, 0, 0 }];
+        yield return [Array.Empty<int>(), Array.Empty<int>()];
     }
 }

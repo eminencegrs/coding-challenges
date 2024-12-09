@@ -4,6 +4,7 @@ using Xunit;
 
 namespace DailyCodingProblem.Challenges.UnitTests.Y2024.M10.Day28;
 
+// TODO: fix the unit tests.
 public class SolutionTests
 {
     [Theory (Skip = "Investigation is required")]
