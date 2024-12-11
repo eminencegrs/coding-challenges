@@ -5,6 +5,7 @@ public static class Solution
     public static IList<IList<int>> Subsets(int[] numbers)
     {
         var result = new List<IList<int>>();
+        Array.Sort(numbers);
         Dfs(0, []);
         return result;
 

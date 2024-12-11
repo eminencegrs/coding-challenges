@@ -64,6 +64,34 @@ public class SolutionTests
 
         yield return
         [
+            new[] { 2, 2, 1 },
+            new List<IList<int>>
+            {
+                new List<int> { 1, 2, 2 },
+                new List<int> { 1, 2 },
+                new List<int> { 1 },
+                new List<int> { 2, 2 },
+                new List<int> { 2 },
+                new List<int>()
+            }
+        ];
+
+        yield return
+        [
+            new[] { 2, 1, 2 },
+            new List<IList<int>>
+            {
+                new List<int> { 1, 2, 2 },
+                new List<int> { 1, 2 },
+                new List<int> { 1 },
+                new List<int> { 2, 2 },
+                new List<int> { 2 },
+                new List<int>()
+            }
+        ];
+
+        yield return
+        [
             new[] { 1, 2, 3 },
             new List<IList<int>>
             {
@@ -94,6 +122,24 @@ public class SolutionTests
                 new List<int> { 2, 3 },
                 new List<int> { 2 },
                 new List<int> { 3 },
+                new List<int>()
+            }
+        ];
+
+        yield return
+        [
+            new[] { 4, 4, 4, 1, 4 },
+            new List<IList<int>>
+            {
+                new List<int> { 1, 4, 4, 4, 4 },
+                new List<int> { 1, 4, 4, 4 },
+                new List<int> { 1, 4, 4 },
+                new List<int> { 1, 4 },
+                new List<int> { 1 },
+                new List<int> { 4, 4, 4, 4 },
+                new List<int> { 4, 4, 4 },
+                new List<int> { 4, 4 },
+                new List<int> { 4 },
                 new List<int>()
             }
         ];
