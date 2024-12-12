@@ -1,5 +1,6 @@
 namespace LeetCode.Challenges.Problems25xx.N_2558_TakeGiftsFromTheRichestPile;
 
+// Time Complexity: O(n log n).
 public static class BruteForceSolution
 {
     public static long PickGifts(int[] gifts, int k)
