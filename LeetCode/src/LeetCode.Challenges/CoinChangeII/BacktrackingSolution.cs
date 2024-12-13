@@ -2,7 +2,7 @@
 
 public static class BacktrackingSolution
 {
-    public static int CoinChange(int[] coins, int amount)
+    public static int CoinChange(int amount, int[] coins)
     {
         var count = 0;
         Backtrack(0, amount);
