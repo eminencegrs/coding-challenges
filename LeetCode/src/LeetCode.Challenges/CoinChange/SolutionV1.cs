@@ -1,10 +1,12 @@
 ﻿namespace LeetCode.Challenges.CoinChange;
 
-public class SolutionV1
+public static class SolutionV1
 {
-    public int CoinChange(int[] coins, int amount)
+    public static int CoinChange(int[] coins, int amount)
     {
         var cache = new Dictionary<int, int>();
+
+        return GetChange(amount);
 
         int GetChange(int tempAmount)
         {
@@ -36,7 +38,5 @@ public class SolutionV1
             cache[tempAmount] = minCoins != int.MaxValue ? minCoins : -1;
             return cache[tempAmount];
         }
-
-        return GetChange(amount);
     }
 }
