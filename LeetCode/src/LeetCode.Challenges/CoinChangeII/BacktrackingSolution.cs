@@ -4,14 +4,13 @@ public static class BacktrackingSolution
 {
     public static int CoinChange(int[] coins, int amount)
     {
-        // Counter to store the total number of combinations
         var count = 0;
         Backtrack(0, amount);
         return count;
 
         void Backtrack(int start, int remaining)
         {
-            // Base Case: if the remaining amount is 0, we have found a valid combination.
+            // The base case: if the remaining amount is 0, we have found a valid combination.
             if (remaining == 0)
             {
                 count++;

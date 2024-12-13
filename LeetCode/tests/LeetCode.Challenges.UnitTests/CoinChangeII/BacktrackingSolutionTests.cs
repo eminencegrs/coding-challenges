@@ -48,6 +48,7 @@ public class BacktrackingSolutionTests
         yield return [new[] { 1, 2, 5 }, 5, 4];
 
         yield return [new[] { 2 }, 3, 0];
+        yield return [new[] { 10 }, 10, 1];
         yield return [new[] { 1, 3, 4 }, 6, 4];
         yield return [new[] { 5 }, 5, 1];
         yield return [new[] { 5 }, 2, 0];
@@ -61,5 +62,8 @@ public class BacktrackingSolutionTests
         yield return [new[] { 1, 3, 4, 7 }, 15, 22];
         yield return [new[] { 25, 50, 100 }, 30, 0];
         yield return [new[] { 9, 6, 5, 1 }, 11, 6];
+
+        // LeetCode: Time Limit Exceeded
+        yield return [new[] { 3,5,7,8,9,10,11 }, 500, 35502874];
     }
 }
