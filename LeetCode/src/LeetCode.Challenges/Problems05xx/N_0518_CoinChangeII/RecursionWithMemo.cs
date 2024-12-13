@@ -1,4 +1,4 @@
-namespace LeetCode.Challenges.CoinChangeII;
+namespace LeetCode.Challenges.Problems05xx.N_0518_CoinChangeII;
 
 public static class RecursionWithMemo
 {

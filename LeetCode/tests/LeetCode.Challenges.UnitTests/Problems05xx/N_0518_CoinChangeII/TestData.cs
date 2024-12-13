@@ -1,6 +1,6 @@
 using System.Collections;
 
-namespace LeetCode.Challenges.UnitTests.CoinChangeII;
+namespace LeetCode.Challenges.UnitTests.Problems05xx.N_0518_CoinChangeII;
 
 public class TestData : IEnumerable<object[]>
 {
