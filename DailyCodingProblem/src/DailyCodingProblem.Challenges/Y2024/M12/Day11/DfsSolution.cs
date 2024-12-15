@@ -1,6 +1,6 @@
 namespace DailyCodingProblem.Challenges.Y2024.M12.Day11;
 
-public static class Solution
+public static class DfsSolution
 {
     public static TreeNode? PruneTree(TreeNode? root)
     {

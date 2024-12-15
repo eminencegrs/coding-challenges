@@ -4,13 +4,13 @@ using Xunit;
 
 namespace DailyCodingProblem.Challenges.UnitTests.Y2024.M12.Day11;
 
-public class SolutionTests
+public class DfsSolutionTests
 {
     [Theory]
     [MemberData(nameof(TestData))]
     public void GivenTreeNode_WhenPruneTree_ThenResultAsExpected(TreeNode root, TreeNode expected)
     {
-        Solution.PruneTree(root).ShouldBeEquivalentTo(expected);
+        DfsSolution.PruneTree(root).ShouldBeEquivalentTo(expected);
     }
 
     public static IEnumerable<object[]> TestData()
