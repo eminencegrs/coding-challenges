@@ -1,5 +1,9 @@
 namespace LeetCode.Challenges.Assessments.Range_Sum_Query___Mutable;
 
+// A NumArray object will be instantiated and called as such:
+//  - NumArray obj = new NumArray(nums);
+//  - obj.Update(index,val);
+//  - int param_2 = obj.SumRange(left,right);
 public class NumArray
 {
     private readonly int[] segmentTree;
@@ -14,14 +18,14 @@ public class NumArray
 
     private void BuildSegmentTree(int[] nums)
     {
-        // Initialize leaves of the segment tree
-        for (int i = 0; i < this.n; i++)
+        // Initialize leaves of the segment tree.
+        for (var i = 0; i < this.n; i++)
         {
             this.segmentTree[this.n + i] = nums[i];
         }
 
-        // Build the rest of the tree by calculating parents
-        for (int i = this.n - 1; i > 0; i--)
+        // Build the rest of the tree by calculating parents.
+        for (var i = this.n - 1; i > 0; i--)
         {
             this.segmentTree[i] = this.segmentTree[2 * i] + this.segmentTree[2 * i + 1];
         }
@@ -29,21 +33,21 @@ public class NumArray
 
     public void Update(int index, int val)
     {
-        // Update the value at the leaf
-        int pos = index + n;
-        segmentTree[pos] = val;
+        // Update the value at the leaf.
+        var pos = index + this.n;
+        this.segmentTree[pos] = val;
 
-        // Recalculate the sum for the parent nodes
+        // Recalculate the sum for the parent nodes.
         while (pos > 1)
         {
             pos /= 2;
-            segmentTree[pos] = segmentTree[2 * pos] + segmentTree[2 * pos + 1];
+            this.segmentTree[pos] = this.segmentTree[2 * pos] + this.segmentTree[2 * pos + 1];
         }
     }
 
     public int SumRange(int left, int right)
     {
-        int sum = 0;
+        var sum = 0;
         left += n;
         right += n;
 
@@ -51,13 +55,13 @@ public class NumArray
         {
             if (left % 2 == 1)
             {
-                sum += segmentTree[left];
+                sum += this.segmentTree[left];
                 left++;
             }
 
             if (right % 2 == 0)
             {
-                sum += segmentTree[right];
+                sum += this.segmentTree[right];
                 right--;
             }
 
@@ -68,11 +72,3 @@ public class NumArray
         return sum;
     }
 }
-
-/**
- * Your NumArray object will be instantiated and called as such:
- * NumArray obj = new NumArray(nums);
- * obj.Update(index,val);
- * int param_2 = obj.SumRange(left,right);
- */
- 
