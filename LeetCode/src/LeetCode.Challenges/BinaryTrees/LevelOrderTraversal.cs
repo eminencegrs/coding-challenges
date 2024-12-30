@@ -2,7 +2,7 @@ namespace LeetCode.Challenges.BinaryTrees;
 
 public class LevelOrderTraversal
 {
-    public string SerializeLevelOrder(TreeNode? node, string delimiter = ";", string nullMark = "#")
+    public static string SerializeLevelOrder(TreeNode? node, string delimiter = ";", string nullMark = "#")
     {
         if (node == null)
         {

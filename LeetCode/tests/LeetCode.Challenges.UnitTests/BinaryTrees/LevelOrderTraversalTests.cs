@@ -10,8 +10,7 @@ public class LevelOrderTraversalTests
     [MemberData(nameof(TestData))]
     public void GivenTreeNode_WhenSerializeLevelOrder_ThenResultAsExpected(TreeNode node, string expectedResult)
     {
-        var cut = new LevelOrderTraversal();
-        var actualResult = cut.SerializeLevelOrder(node);
+        var actualResult = LevelOrderTraversal.SerializeLevelOrder(node);
         actualResult.ShouldBeEquivalentTo(expectedResult);
     }
 

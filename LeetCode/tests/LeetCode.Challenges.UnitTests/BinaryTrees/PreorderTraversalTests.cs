@@ -10,8 +10,7 @@ public class PreorderTraversalTests
     [MemberData(nameof(TestData))]
     public void GivenTreeNode_WhenSerializePreorder_ThenResultAsExpected(TreeNode node, string expectedResult)
     {
-        var cut = new PreorderTraversal();
-        var actualResult = cut.SerializePreorder(node);
+        var actualResult = PreorderTraversal.SerializePreorder(node);
         actualResult.ShouldBeEquivalentTo(expectedResult);
     }
 

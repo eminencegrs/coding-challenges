@@ -10,8 +10,7 @@ public class InorderTraversalTests
     [MemberData(nameof(TestData))]
     public void GivenTreeNode_WhenSerializeInorder_ThenResultAsExpected(TreeNode node, string expectedResult)
     {
-        var cut = new InorderTraversal();
-        var actualResult = cut.SerializeInorder(node);
+        var actualResult = InorderTraversal.SerializeInorder(node);
         actualResult.ShouldBeEquivalentTo(expectedResult);
     }
 

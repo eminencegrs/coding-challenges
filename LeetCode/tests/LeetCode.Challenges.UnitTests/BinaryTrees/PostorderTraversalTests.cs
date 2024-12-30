@@ -10,8 +10,7 @@ public class PostorderTraversalTests
     [MemberData(nameof(TestData))]
     public void GivenTreeNode_WhenSerializePostorder_ThenResultAsExpected(TreeNode node, string expectedResult)
     {
-        var cut = new PostorderTraversal();
-        var actualResult = cut.SerializePostorder(node);
+        var actualResult = PostorderTraversal.SerializePostorder(node);
         actualResult.ShouldBeEquivalentTo(expectedResult);
     }
 

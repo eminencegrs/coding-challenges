@@ -1,5 +1,8 @@
+using System.Diagnostics.CodeAnalysis;
+
 namespace LeetCode.Challenges.BinaryTrees;
 
+[ExcludeFromCodeCoverage]
 public class TreeNode
 {
     public string Value { get; init; } = null!;
