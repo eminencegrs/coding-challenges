@@ -4,34 +4,37 @@ public class Solution
 {
     public static void Rotate(int[] array, int k, string direction)
     {
-        var n = nums.Length;
-        if (n == 0)
+        var length = array.Length;
+        if (length == 0)
         {
             return;
         }
 
         // Handle cases where k > n.
-        k = k % n;
+        k = k % length;
 
         if (direction == "left")
         {
             // Left rotation is equivalent to right rotation by (n - k).
-            k = n - k;
+            k = length - k;
         }
 
         // Perform the three-step reversal.
-        Reverse(nums, 0, n - 1);    // Step 1: Reverse entire array.
-        Reverse(nums, 0, k - 1);    // Step 2: Reverse first k elements.
-        Reverse(nums, k, n - 1);    // Step 3: Reverse remaining elements.
+        // Step 1: Reverse entire array.
+        Reverse(array, 0, length - 1);
+
+        // Step 2: Reverse first k elements.
+        Reverse(array, 0, k - 1);
+
+        // Step 3: Reverse remaining elements.
+        Reverse(array, k, length - 1);
     }
 
-    private void Reverse(int[] nums, int start, int end)
+    private static void Reverse(int[] array, int start, int end)
     {
         while (start < end)
         {
-            var temp = nums[start];
-            nums[start] = nums[end];
-            nums[end] = temp;
+            (array[start], array[end]) = (array[end], array[start]);
             start++;
             end--;
         }
