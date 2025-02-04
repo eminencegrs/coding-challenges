@@ -1,6 +1,6 @@
 namespace DailyCodingProblem.Challenges.Y2025.M02.Day01;
 
-public class Solution
+public static class Solution
 {
     public static void Rotate(int[] array, int k, string direction)
     {
