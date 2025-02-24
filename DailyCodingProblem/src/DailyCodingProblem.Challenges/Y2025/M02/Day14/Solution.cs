@@ -4,6 +4,30 @@ public static class Solution
 {
     public static bool VerifyCollatzSequence(int n)
     {
-        throw new NotImplementedException();
+        ArgumentOutOfRangeException.ThrowIfNegativeOrZero(n);
+
+        if (n == 1)
+        {
+            return true;
+        }
+
+        while (n > 1)
+        {
+            if (n % 2 == 0)
+            {
+                n /= 2;
+            }
+            else
+            {
+                n = 3 * n + 1;
+            }
+
+            if (n == 1)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 }
